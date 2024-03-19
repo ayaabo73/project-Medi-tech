@@ -29,6 +29,10 @@
 										
 										<div class="card-sigin">
 											<div class="main-signup-header">
+												<div class="logo-outer">
+													<div class="logo"><a href="/"><img src="images/logo1.png" alt="" title=""></a></div>
+												
+												</div>
 												<h2>Welcome back!</h2>
 												@if($errors->any())
 												<div class="alert alert-danger">
@@ -75,7 +79,7 @@
 														<a class="underline text-sm text-gray-600 hover:text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" href="{{ route('password.request') }}">
 															{{ __('Forgot your password?') }}  </a>
 															@endif</p>
-													<p>Don't have an account? <a href="{{ url('/' . $page='signup') }}">Create an Account</a></p>
+													<p>Don't have an account? <a href="/re">Create an Account</a></p>
 												</div>
 											</div>
 											</div>
@@ -105,7 +109,7 @@
 														<a class="underline text-sm text-gray-600 hover:text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" href="{{ route('password.request') }}">
 															{{ __('Forgot your password?') }}  </a>
 															@endif</p>
-													<p>Don't have an account? <a href="{{ url('/' . $page='signup') }}">Create an Account</a></p>
+													
 												</div>
 											</div>
 											</div>
@@ -135,7 +139,7 @@
 														<a class="underline text-sm text-gray-600 hover:text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" href="{{ route('password.request') }}">
 															{{ __('Forgot your password?') }}  </a>
 															@endif</p>
-													<p>Don't have an account? <a href="{{ url('/' . $page='signup') }}">Create an Account</a></p>
+													
 												</div>
 											</div>
 										</div>

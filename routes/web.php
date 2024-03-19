@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ProfileController;
+use App\Http\Middleware\RedirectIfAuthenticated;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -17,7 +18,9 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
-
+Route::get('/re', function () {
+    return view('auth.register');
+});
 Route::get('/dashboard/user', function () {
     return view('user.dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard.user');

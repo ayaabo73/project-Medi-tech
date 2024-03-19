@@ -69,7 +69,7 @@
                 <div class="auto-container clearfix">
                     <!--Info-->
                     <div class="logo-outer">
-                        <div class="logo"><a href="home"><img src="images/logo1.png" alt="" title=""></a></div>
+                        <div class="logo"><a href="l"><img src="images/logo1.png" alt="" title=""></a></div>
                     </div>
 
                     <!--Nav Box-->
@@ -127,8 +127,7 @@
                             <div class="btn-box">
 								@if (Route::has('login'))
 									@auth
-									<a href="{{ url('/home') }}" class="theme-btn btn-style-one"><span class="txt">Home</span></a>
-			
+									<a href="{{ route('login')  }}" class="theme-btn btn-style-one"><span class="txt">Home</span></a>
 									@else
 									<a href="{{ route('login') }}" class="theme-btn btn-style-one"><span class="txt">Login</span></a>
 								@if (Route::has('register'))
