@@ -127,9 +127,9 @@
                             <div class="btn-box">
 								@if (Route::has('login'))
 									@auth
-									<a href="{{ route('login')  }}" class="theme-btn btn-style-one"><span class="txt">Home</span></a>
+									<a href="{{ route('login.admin')  }}" class="theme-btn btn-style-one"><span class="txt">Home</span></a>
 									@else
-									<a href="{{ route('login') }}" class="theme-btn btn-style-one"><span class="txt">Login</span></a>
+									<a href="{{ route('login.admin') }}" class="theme-btn btn-style-one"><span class="txt">Login</span></a>
 						@endauth
 						@endif
                             </div>

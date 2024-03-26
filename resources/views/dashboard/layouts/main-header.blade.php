@@ -264,7 +264,7 @@
 									<a class="dropdown-item" href=""><i class="bx bx-envelope"></i>Messages</a>
 									<a class="dropdown-item" href=""><i class="bx bx-slider-alt"></i> Account Settings</a>
 									@if(auth('web')->check())
-									<form method="POST" action="{{ route('logout.user') }}">
+									<form method="POST" action="{{ route('logout.patient') }}">
 								     @elseif(auth('admin')->check())
 									 <form method="POST" action="{{ route('logout.admin') }}">
 										@else

@@ -130,6 +130,9 @@
 									<a href="{{ route('login')  }}" class="theme-btn btn-style-one"><span class="txt">Home</span></a>
 									@else
 									<a href="{{ route('login') }}" class="theme-btn btn-style-one"><span class="txt">Login</span></a>
+									@if (Route::has('register'))
+									<a href="{{ route('register') }}" class="theme-btn btn-style-one"><span class="txt">Register</span></a>
+								@endif
 						@endauth
 						@endif
                             </div>

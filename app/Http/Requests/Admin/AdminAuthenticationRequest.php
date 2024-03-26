@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Requests\Auth;
+namespace App\Http\Requests\Admin;
 
 use Illuminate\Auth\Events\Lockout;
 use Illuminate\Foundation\Http\FormRequest;
@@ -9,7 +9,7 @@ use Illuminate\Support\Facades\RateLimiter;
 use Illuminate\Support\Str;
 use Illuminate\Validation\ValidationException;
 
-class doctorLoginRequest extends FormRequest
+class AdminAuthenticationRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -41,7 +41,7 @@ class doctorLoginRequest extends FormRequest
     {
         $this->ensureIsNotRateLimited();
 
-        if (auth('doctor')->attempt($this->only('email', 'password'), $this->boolean('remember'))) {
+        if (auth('admin')->attempt($this->only('email', 'password'), $this->boolean('remember'))) {
             RateLimiter::hit($this->throttleKey());
 
             throw ValidationException::withMessages([
@@ -83,3 +83,4 @@ class doctorLoginRequest extends FormRequest
         return Str::transliterate(Str::lower($this->string('email')).'|'.$this->ip());
     }
 }
+

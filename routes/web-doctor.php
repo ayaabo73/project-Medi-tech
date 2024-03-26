@@ -15,7 +15,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 Route::get('/', function () {
-    return view('doctor.doctor-welcome');
+    return view('Doctor.doctor-welcome');
 });
 
 
@@ -23,15 +23,15 @@ Route::get('/re', function () {
     return view('auth.register');
 });
 Route::get('/dashboard/user', function () {
-    return view('user.dashboard');
+    return view('Patient.dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard.user');
 
 Route::get('/dashboard/admin', function () {
-    return view('admin.dashboard');
+    return view('Admin.dashboard');
 })->middleware(['auth:admin', 'verified'])->name('dashboard.admin');
 
 Route::get('/dashboard/doctor', function () {
-    return view('doctor.dashboard');
+    return view('Doctor.dashboard');
 })->middleware(['auth:doctor', 'verified'])->name('dashboard.doctor');
 
 
@@ -43,4 +43,4 @@ Route::middleware('auth')->group(function () {
 
 
 
-
+require __DIR__.'/auth.php';

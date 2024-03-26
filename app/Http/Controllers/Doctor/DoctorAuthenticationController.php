@@ -1,14 +1,14 @@
 <?php
 
-namespace App\Http\Controllers\Auth;
+namespace App\Http\Controllers\Doctor;
 
 use App\Http\Controllers\Controller;
-use App\Http\Requests\Auth\doctorLoginRequest;
+use App\Http\Requests\Doctor\DoctorAuthenticationRequest;
 use App\Providers\RouteServiceProvider;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
-class doctorcontroller extends Controller
+class DoctorAuthenticationController extends Controller
 {
    
     public function index()
@@ -19,11 +19,11 @@ class doctorcontroller extends Controller
  
     public function create()
     {
-        //
+        return view('Doctor.auth.signin');
     }
 
   
-    public function store(doctorLoginRequest $request)
+    public function store(DoctorAuthenticationRequest $request)
     {
         $request->authenticate();
 

@@ -1,15 +1,16 @@
 <?php
 
-namespace App\Http\Controllers\Auth;
+namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
-use App\Http\Requests\Auth\adminLoginRequest;
+use App\Http\Requests\Admin\AdminAuthenticationRequest;
 use App\Providers\RouteServiceProvider;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
-class admincontroller extends Controller
+class AdminAuthenticationController extends Controller
 {
+
     
     public function index()
     {
@@ -19,11 +20,11 @@ class admincontroller extends Controller
    
     public function create()
     {
-        //
+        return view('Admin.auth.signin');
     }
 
     
-    public function store(adminLoginRequest $request)
+    public function store(AdminAuthenticationRequest $request)
     {
         $request->authenticate();
 
@@ -62,3 +63,5 @@ class admincontroller extends Controller
         return redirect('/');
     }
 }
+
+
