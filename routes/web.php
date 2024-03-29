@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\ProfileController;
 use App\Http\Middleware\RedirectIfAuthenticated;
+use App\Livewire\Chat\CreateChat;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -21,7 +22,7 @@ Route::get('/', function () {
 Route::get('/re', function () {
     return view('auth.register');
 });
-Route::get('/dashboard/user', function () {
+Route::get('/dashboard/patient', function () {
     return view('Patient.dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard.user');
 
@@ -39,6 +40,17 @@ Route::middleware('auth')->group(function () {
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
+
+// ###############################chat route#################
+
+Route::get('list/doctors',CreateChat::class)->name('list.doctors');
+
+
+
+
+
+
+// ############################################################################
 
 
 require __DIR__.'/auth.php';

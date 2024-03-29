@@ -33,7 +33,7 @@
 													<div class="logo"><a href="/"><img src="images/logo1.png" alt="" title=""></a></div>
 												
 												</div>
-												<h2>Welcome back!</h2>
+												<h2>Welcome back doctor!</h2>
 												@if($errors->any())
 												<div class="alert alert-danger">
 													<ul>
@@ -46,7 +46,7 @@
 
 												
 														<h5 class="font-weight-semibold mb-4">Please Log in to continue</h5>
-												<form method="POST" action="{{ route('login.patient') }}">
+												<form method="POST" action="{{ route('login.Doctor') }}">
 													@csrf 
 													<div class="form-group">
 														<label>Email</label> <input class="form-control"  placeholder="Enter your email" type="email" name="email" :value="old('email')" required autofocus autocomplete="username" >
