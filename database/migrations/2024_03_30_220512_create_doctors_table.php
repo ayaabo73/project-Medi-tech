@@ -14,9 +14,13 @@ return new class extends Migration
         Schema::create('doctors', function (Blueprint $table) {
             $table->id();
             $table->string('name');
+            $table->string('password');
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
-            $table->string('password');
+            $table->foreignId('sections_id')->constrained('sections')->onDelete('cascade');
+            $table->string('phone');
+            $table->string('image');
+            $table->string('location');
             $table->rememberToken();
             $table->timestamps();
         });
@@ -27,6 +31,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('doctors');
+        Schema::dropIfExists('pending');
     }
 };

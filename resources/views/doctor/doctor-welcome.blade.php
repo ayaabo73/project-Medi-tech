@@ -130,10 +130,10 @@
 									<a href="{{ route('login.doctor')  }}" class="theme-btn btn-style-one"><span class="txt">Home</span></a>
 									@else
 									<a href="{{ route('login.doctor') }}" class="theme-btn btn-style-one"><span class="txt">Login</span></a>
-								
+									
 						@endauth
 						@endif
-                            </div>
+					</div>
                         </div>
                     </div>
                 </div>

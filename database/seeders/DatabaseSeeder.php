@@ -15,7 +15,7 @@ class DatabaseSeeder extends Seeder
         $this->call([
             Patient::class,
             Admin::class,
-            Doctor::class,
+           
            ]);
     }
 }

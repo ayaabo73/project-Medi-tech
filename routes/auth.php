@@ -29,7 +29,6 @@ Route::middleware('guest')->group(function () {
         //  ###################Route doctor#####################
         Route::get('doctor/login', [DoctorAuthenticationController::class, 'create'])->name('login.doctor');
         Route::post('login/doctor', [DoctorAuthenticationController::class, 'store'])->name('login.Doctor');
-        
         // ###############################################################################
     Route::get('forgot-password', [PasswordResetLinkController::class, 'create']) ->name('password.request');
 

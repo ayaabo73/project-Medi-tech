@@ -1,8 +1,8 @@
 <?php
 
-use App\Http\Controllers\AdminController;
 use App\Http\Controllers\ProfileController;
-use App\Http\Middleware\RedirectIfAuthenticated;
+use App\Livewire\Admin\AddDoctor;
+use App\Livewire\Admin\Sections;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -19,20 +19,11 @@ Route::get('/', function () {
     return view('Admin.admin-welcome');
 });
 
-Route::get('/re', function () {
-    return view('auth.register');
-});
-Route::get('/dashboard/upatient', function () {
-    return view('Patirnt.dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard.patirnt');
 
 Route::get('/dashboard/admin', function () {
     return view('Admin.dashboard');
 })->middleware(['auth:admin', 'verified'])->name('dashboard.admin');
 
-Route::get('/dashboard/doctor', function () {
-    return view('Doctor.dashboard');
-})->middleware(['auth:doctor', 'verified'])->name('dashboard.doctor');
 
 
 Route::middleware('auth')->group(function () {
@@ -41,6 +32,11 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-Route::get('sections',[AdminController::class,'sections'])->name('sections');
+// ################################################################
+
+Route::middleware(['auth:admin'])->group(function () {
+Route::get('/sections',Sections::class)->name('Add.sections');
+Route::get('/add-doctor',AddDoctor::class)->name('Add.doctor');
+});
 
 require __DIR__.'/auth.php';

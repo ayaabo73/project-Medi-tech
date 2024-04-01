@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\ProfileController;
 use App\Http\Middleware\RedirectIfAuthenticated;
+use App\Livewire\Admin\Sections;
 use App\Livewire\Chat\CreateChat;
 use Illuminate\Support\Facades\Route;
 
