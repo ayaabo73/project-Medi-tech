@@ -14,7 +14,7 @@ class Doctor extends Authenticatable
         'name',
         'email',
         'password',
-        'section_id',
+        'sections_id',
         'phone',
         'image',
     ];

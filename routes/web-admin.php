@@ -1,8 +1,12 @@
 <?php
 
 use App\Http\Controllers\ProfileController;
-use App\Livewire\Admin\AddDoctor;
+use App\Livewire\Admin\CreateDoctor;
+use App\Livewire\Admin\CreateSection;
+use App\Livewire\Admin\Doctors;
 use App\Livewire\Admin\Sections;
+use App\Livewire\Admin\UpdateDoctor;
+use App\Livewire\Admin\UpdateSection;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -35,8 +39,12 @@ Route::middleware('auth')->group(function () {
 // ################################################################
 
 Route::middleware(['auth:admin'])->group(function () {
-Route::get('/sections',Sections::class)->name('Add.sections');
-Route::get('/add-doctor',AddDoctor::class)->name('Add.doctor');
+Route::get('/Sections',Sections::class);
+Route::get('/create/section',CreateSection::class);
+Route::get('/update/section/{id}',UpdateSection::class);
+Route::get('/Doctor',Doctors::class);
+Route::get('/create/doctor',CreateDoctor::class);
+Route::get('/update/doctor/{id}',UpdateDoctor::class);
 });
 
 require __DIR__.'/auth.php';

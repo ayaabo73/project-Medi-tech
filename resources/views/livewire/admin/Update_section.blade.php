@@ -26,7 +26,7 @@
                     
                     
                    </div>@endif
-             <form wire:submit="save" enctype="mulipart/form-data">
+             <form wire:submit="update" enctype="mulipart/form-data">
              
                     <div class="form-group">
                        <label for="name">name</label>
@@ -70,15 +70,19 @@
                                                 @error('section')<span class="text-danger">{{ $message }}</span>   
                                                 @enderror
                                             </div>
+                                            @if($this->image_original !='')
+                                            <img src="{{asset('storage/photos/'.$this->image_original) }}" width="100">
+                                            @endif
                                             <div class="form-group">
                                                 <label for="image">image</label>
                                                 <input type="file" name="image" class="custom-file" wire:model="image">
                                                     @error('image')<span class="text-danger">{{ $message }}</span>   
                                                     @enderror
+                                                   
                                             </div>
                </div>
                <div class="modal-footer">
-                  <input type="submit" name="save" value="Add" class="btn btn-primary">
+                  <input type="submit" name="save" value="Update" class="btn btn-primary">
             </div>
             </form>
         </div>
