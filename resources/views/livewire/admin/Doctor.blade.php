@@ -41,7 +41,7 @@
                 @foreach ($doctors as $doctor)
                     <tr>
                         <td>{{ $doctor->id}}</td>
-                        <td><img src="{{asset('storage/photos/'.$doctor->image) }}" width="70px" hight="70px"></td>
+                        <td><img src="{{asset('storage/'.$doctor->image) }}" width="70px" hight="70px"></td>
                         <td>{{ $doctor->name }}</td>
                         <td>{{ $doctor->email }}</td>
                         <td>{{ $doctor->section->name }}</td>

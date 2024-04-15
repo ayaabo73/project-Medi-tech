@@ -4,6 +4,7 @@ use App\Http\Controllers\ProfileController;
 use App\Http\Middleware\RedirectIfAuthenticated;
 use App\Livewire\Admin\Sections;
 use App\Livewire\Chat\CreateChat;
+use App\Livewire\Patient\DoctorList;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -44,11 +45,9 @@ Route::middleware('auth')->group(function () {
 
 // ###############################chat route#################
 
-Route::get('list/doctors',CreateChat::class)->name('list.doctors');
 
-
-
-
+    Route::get('/Doctors/list',CreateChat::class);
+    
 
 
 // ############################################################################

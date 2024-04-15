@@ -2,7 +2,7 @@
 
 namespace App\Livewire\Admin;
 
-use App\Models\Doctor;
+
 use App\Models\Section;
 use Illuminate\Support\Facades\DB;
 use Livewire\Component;
@@ -14,9 +14,9 @@ class Sections extends Component
     use WithPagination;
     use WithFileUploads;
     public function render()
-    {   $doctor=Doctor::all();
+    { 
         $sections= Section::all();
-        return view('livewire.admin.Section',['doctor'=>$doctor,'sections'=>$sections]);
+        return view('livewire.admin.Section',['sections'=>$sections]);
     }
     
     public function create_section(){
@@ -37,7 +37,7 @@ class Sections extends Component
         DB::statement("UPDATE sections SET sections.id = @count:= @count + 1;");
         DB::statement("ALTER TABLE sections AUTO_INCREMENT = 1;");
         session()->flash('message','success');
-        return redirect()->to('/Section');
+        return redirect()->to('/Sections');
 
     }
 }

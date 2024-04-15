@@ -29,28 +29,31 @@
                             <thead>
                             <tr>
                     <th></th>
-                    <th>Image</th>
                     <th>Name</th>
-                    <th>Email</th>
+                    <th>Doctors</th>
+                    <th>created_at </th>
+                    
                 </tr>
             </thead>
             <tbody>
                 @foreach ($sections as $section)
+    
+               
                     <tr>
                         <td>{{ $section->id}}</td>
-                        <td>{{ $section->name }}</td>
-                        {{-- <td>{{ $section->section->name }}</td>
-                        <td>{{ $section->email }}</td> --}}
-                      
+                        <td>{{ $section->name }}</td> 
+                        <td>{{ $section->doctor}}</td>
+                        <td>{{ $section->created_at}}</td>
                         <td>
-    
-                            <button wire:click="update_section({{ $section->id }})" class="btn btn-primary btn-sm"><i class="fa fa-edit"></i></button>
+                        <button wire:click="update_section({{ $section->id }})" class="btn btn-primary btn-sm"><i class="fa fa-edit"></i></button>
                         <button type="button" class="btn btn-danger btn-sm" data-toggle="modal" data-target="#delete_section{{$section->id}}"><i class="fa fa-trash"></i></button>
                         </td>
+                        
                     </tr>
+
                    
                   @include('livewire.admin.delete_section')
-
+                
                 @endforeach
             </table>
         </div>

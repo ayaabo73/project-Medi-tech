@@ -21,7 +21,7 @@ class CreateSection extends Component
     }
     
     public function return_to_addsection(){
-        return redirect()->to('/Section');
+        return redirect()->to('Sections');
     }
     public function save(Request $request){ 
         $this->Validate([
@@ -32,6 +32,6 @@ class CreateSection extends Component
        $section->name=$this->name;
        $section->save();
        session()->flash('message','success');
-       return redirect()->to('/Section');
+       return redirect()->to('Sections');
       }
 }

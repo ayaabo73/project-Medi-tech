@@ -45,7 +45,7 @@ class CreateDoctor extends Component
        $doctor->email=$this->email;
        $doctor->phone=$this->phone;
        $doctor->location=$this->location;
-       $doctor->password=$this->password;
+       $doctor->password=bcrypt($this->password);
        $doctor->sections_id=$this->section;
        $image=$this->image->store('photos','public');
        $doctor->image=$image;

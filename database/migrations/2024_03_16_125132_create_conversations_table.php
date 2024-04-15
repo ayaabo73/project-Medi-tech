@@ -13,6 +13,9 @@ return new class extends Migration
     {
         Schema::create('conversations', function (Blueprint $table) {
             $table->id();
+            $table->string('sender_email');
+            $table->string('receiver_email');
+            $table->timestamp('last_time_message')->nullable();
             $table->timestamps();
         });
     }

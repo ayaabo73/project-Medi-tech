@@ -6,62 +6,54 @@ use App\Models\Doctor;
 use App\Models\Section;
 use Livewire\Component;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\File;
 use Livewire\Attributes\Validate;
-use Livewire\Features\SupportFileUploads\WithFileUploads;
-use Livewire\WithPagination;
 
 class UpdateSection extends Component
-{ use WithPagination;
-    use WithFileUploads;
+{ 
     public $id;
     public $name;
    public $section;
-   
+   public $doctor;
 
    public function mount(){
     $this->id=request()->id;
     $this->section=Section::whereId($this->id)->first();
-    $this->name=$this->doctor->name;
-   
+    $this->name=$this->section->name;
+    
 
    }
     public function render()
     {
-        $sections=Section::all();
-        return view('livewire.admin.update_doctor',['sections'=>$sections,'doctor'=>$this->doctor]);   
+        $doctors=Section::find($this->id)->Doctor;
+        return view('livewire.admin.Update_section',['doctors'=>$doctors,'section'=>$this->section]);   
     }
     
-    public function return_to_addDoctor(){
-        return redirect()->to('/add-doctor');
+    public function return_to_addSection(){
+        return redirect()->to('/Sections');
     }
-    public function update(Request $request){ 
+    public function update_section(Request $request){ 
         $this->Validate([
           'name'  =>'required',
-          'email'  =>'required',
-          'phone'  =>'required',
-          'location'  =>'required',
-         'password'  =>'required',
-          'section'  =>'required',
-          'image'  =>'nullable|mimes:jpg,jpeg,gif,png|max:20000',
+         
         ]);
      
-      $doctor=Doctor::whereId($this->id)->first();
-       $doctor->name=$this->name;
-       $doctor->email=$this->email;
-       $doctor->phone=$this->phone;
-       $doctor->location=$this->location;
-       $doctor->password=$this->password;
-       $doctor->sections_id=$this->section;
-       if($image=$this->image){
-       if(File::exists('storage/photos/'.$this->image)){
-        unlink('storage/photos/'.$this->image);
-       }
-       $image=$this->image->store('photos','public');
-       $doctor->image=$image;
-    }
-       $doctor->update();
+      $section=Section::whereId($this->id)->first();
+       $section->name=$this->name;
+    
+       $section->update();
        session()->flash('message','success');
-       return redirect()->to('/add-doctor');
+       return redirect()->to('/Sections');
       }
+      public function delete_doctor($id){
+        $doctor=doctor::whereId($id);
+        $doctor->delete();
+        DB::statement("SET @count = 0;");
+        DB::statement("UPDATE doctors SET doctors.id = @count:= @count + 1;");
+        DB::statement("ALTER TABLE doctors AUTO_INCREMENT = 1;");
+        session()->flash('message','success');
+        return redirect()->to('/Sections');
+
+    }
 }
