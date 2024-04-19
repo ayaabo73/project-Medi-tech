@@ -8,7 +8,9 @@ use Illuminate\Database\Eloquent\Model;
 class Section extends Model
 {
     use HasFactory;
-    protected $guarded =[];
+    protected  $fillable=[
+        'name',
+    ];
     public function doctor(){
         return $this->hasMany(Doctor::class,'sections_id','id');
     }

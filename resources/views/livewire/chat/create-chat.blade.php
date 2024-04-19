@@ -3,7 +3,7 @@
         <div class="col-xl-12">
             <div class="card">
        <div class="card-header ">
-            <b>Doctors</b>
+            <b></b>
         &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp;  &ensp;  &ensp;  &ensp;  &ensp;  &ensp;  &ensp;  &ensp;  &ensp;  &ensp;  &ensp;  &ensp;  &ensp;  &ensp;  &ensp;  &ensp;  &ensp;  &ensp;  &ensp;  &ensp;  &ensp;  &ensp;  &ensp;  &ensp;  &ensp;  &ensp;  &ensp;  &ensp;  &ensp;
        
        </div>
@@ -30,7 +30,7 @@
                             <tr>
                     <th></th>
                     <th></th>
-                    <th>Image</th>
+                    <th>name</th>
                     <th></th>
                     <th>Section</th>
                     <th></th>
@@ -45,11 +45,11 @@
                         <td>{{ $patient->id}}</td><td></td>
                         <td>{{ $patient->name }}</td>
                         <td></td>
-                        <td>{{ $patient->section->name }}</td>
+                       
                         <td></td><td></td><td></td><td></td>
                         <td>
     
-                            <a href="javascript:void(0);" wire:click="create_Conversation" class="btn btn-primary btn-sum ">Message</a>
+                            <a href="javascript:void(0);" wire:click="create_Conversation('{{$patient->email}}')" class="btn btn-primary btn-sum ">Message</a>
                         </td>
                     </tr>
                    
@@ -65,6 +65,7 @@
 </div>
 </div>
 </div>
+
 
 
 

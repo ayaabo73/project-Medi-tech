@@ -4,6 +4,7 @@ use App\Http\Controllers\ProfileController;
 use App\Http\Middleware\RedirectIfAuthenticated;
 use App\Livewire\Admin\Sections;
 use App\Livewire\Chat\CreateChat;
+use App\Livewire\Chat\Main;
 use App\Livewire\Patient\DoctorList;
 use Illuminate\Support\Facades\Route;
 
@@ -28,13 +29,6 @@ Route::get('/dashboard/patient', function () {
     return view('Patient.dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard.user');
 
-Route::get('/dashboard/admin', function () {
-    return view('Admin.dashboard');
-})->middleware(['auth:admin', 'verified'])->name('dashboard.admin');
-
-Route::get('/dashboard/doctor', function () {
-    return view('Doctor.dashboard');
-})->middleware(['auth:doctor', 'verified'])->name('dashboard.doctor');
 
 
 Route::middleware('auth')->group(function () {
@@ -47,6 +41,7 @@ Route::middleware('auth')->group(function () {
 
 
     Route::get('/Doctors/list',CreateChat::class);
+    Route::get('/Doctors/chat',Main::class);
     
 
 
