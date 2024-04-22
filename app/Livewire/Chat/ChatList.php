@@ -15,6 +15,8 @@ class ChatList extends Component
     public $receviverUser;
     public $selected_conversation;
 
+    protected $listeners = ['chatUserSelected', 'refresh' => '$refresh'];
+    
     public function mount(){
         $this->auth_email=auth()->user()->email;
     }
@@ -33,17 +35,18 @@ class ChatList extends Component
 
     }
    
-    public function chatUserSelected(Conversation $conversation, $receiver_id)
+    public function chatUserSelected(Conversation $Conversation , $receiver_id)
     {
-
-        $this->selected_conversation = $conversation;
+        $this->selected_conversation = $Conversation;
         $this->receviverUser = Doctor::find($receiver_id);
         if (Auth::guard('web')->check()) {
-            $this->emitTo('chat.chat-box','load_conversationDoctor',$this->selected_conversation, $this->receviverUser);
-           
-        } else {
-            $this->emitTo('chat.chat-box','load_conversationPatient',$this->selected_conversation, $this->receviverUser);
-          
+            $this->dispatch('load_conversationDoctor',$this->selected_conversation, $this->receviverUser);
+            $this->dispatch('updateMessage', $this->selected_conversation, $this->receviverUser);
+        }
+
+         else {
+            $this->dispatch('load_conversationPatient',$this->selected_conversation, $this->receviverUser);
+            $this->dispatch( 'updateMessage2', $this->selected_conversation, $this->receviverUser);
         }
 
     }
