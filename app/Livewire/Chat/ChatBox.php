@@ -20,7 +20,7 @@ class ChatBox extends Component
     public $event_name;
     public $chat_page;
 
- protected $listeners = ['load_conversationDoctor','load_conversationPatient', 'pushMessage'];
+//  protected $listeners = ['load_conversationDoctor','load_conversationPatient', 'pushMessage'];
 
  public function mount()
  {
@@ -59,10 +59,9 @@ class ChatBox extends Component
 
     public function broadcastMassage($event)
     {
-        dd($event);
-        // $broadcastMessage = Message::find($event['message']);
-        // $broadcastMessage->read = 1;
-        // $this->pushMessage($broadcastMessage->id);
+        $broadcastMessage = Message::find($event['message']);
+        $broadcastMessage->read = 1;
+        $this->pushMessage($broadcastMessage->id);
     }
 
     public function load_conversationDoctor(Conversation $Conversation , Doctor $receiver)

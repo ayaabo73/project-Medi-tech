@@ -40,11 +40,12 @@
             </thead>
             <tbody>
                 @foreach ($patients as $patient)
-               
+              
                     <tr>
                         <td>{{ $patient->id}}</td><td></td>
                         <td>{{ $patient->name }}</td>
                         <td></td>
+                        <td>{{ $patient->section->name }}</td>
                        
                         <td></td><td></td><td></td><td></td>
                         <td>
@@ -53,7 +54,7 @@
                         </td>
                     </tr>
                    
-            
+                 
                 @endforeach
             </table>
         </div>

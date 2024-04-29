@@ -1,4 +1,7 @@
 <div>
+    @section('css')
+    @endsection
+
     <div class="main-chat-list" id="ChatList">
         @foreach ($Conversations as $Conversation)
         <div class="media new"

@@ -21,17 +21,25 @@
 								<nav class="nav main-nav-line main-nav-line-chat">
 									<a class="nav-link active" data-toggle="tab" href="">Recent Chat</a> 
 								</nav>
+								<div class="main-chat-list" id="ChatList">
 								<!-- main-chat-active-contacts -->
 								@livewire('chat.chat-list')
 							</div>
+						</div>
 						</div>
 					</div>
 					<div class="col-xl-8 col-lg-7">
 						<div class="card">
 							<a class="main-header-arrow" href="" id="ChatBodyHide"><i class="icon ion-md-arrow-back"></i></a>
-                            @livewire('chat.chat-box')
+								
+								
+								<div class="main-chat-body" id="ChatBody">
+				
+							@livewire('chat.chat-box')
                             @livewire('chat.send-message')
-						</div>
+					
+					</div>
+				</div>
 					</div>
 				</div>
 				<!-- row -->

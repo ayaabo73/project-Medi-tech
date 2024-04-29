@@ -6,15 +6,13 @@ use App\Models\Conversation;
 use App\Models\Doctor;
 use App\Models\Message;
 use App\Models\patient;
-use Illuminate\Broadcasting\Channel;
 use Illuminate\Broadcasting\InteractsWithSockets;
-use Illuminate\Broadcasting\PresenceChannel;
 use Illuminate\Broadcasting\PrivateChannel;
 use Illuminate\Contracts\Broadcasting\ShouldBroadcast;
 use Illuminate\Foundation\Events\Dispatchable;
 use Illuminate\Queue\SerializesModels;
 
-class MassageSent
+class MassageSend  implements ShouldBroadcast
 {
     use Dispatchable, InteractsWithSockets, SerializesModels;
 
@@ -35,7 +33,7 @@ class MassageSent
         return [
             'sender_email' => $this->sender->email,
             'message' => $this->massage->id,
-            'conversation_id' => $this->conversation->id,
+            'conversations_id' => $this->conversation->id,
             'receivere_email' => $this->receiver->email,
         ];
     }
