@@ -29,6 +29,7 @@ class MassageSend2 implements ShouldBroadcast
         $this->massage = $massage;
         $this->conversation = $conversation;
         $this->receiver = $receiver;
+        
     }
     public function broadcastWith()
     {

@@ -1,10 +1,13 @@
 <?php
 
 use App\Http\Controllers\ProfileController;
+use App\Livewire\Admin\Articles;
+use App\Livewire\Admin\CreateArticles;
 use App\Livewire\Admin\CreateDoctor;
 use App\Livewire\Admin\CreateSection;
 use App\Livewire\Admin\Doctors;
 use App\Livewire\Admin\Sections;
+use App\Livewire\Admin\UpdateArticles;
 use App\Livewire\Admin\UpdateDoctor;
 use App\Livewire\Admin\UpdateSection;
 use Illuminate\Support\Facades\Route;
@@ -45,6 +48,9 @@ Route::get('/update/section/{id}',UpdateSection::class);
 Route::get('/Doctor',Doctors::class);
 Route::get('/create/doctor',CreateDoctor::class);
 Route::get('/update/doctor/{id}',UpdateDoctor::class);
+Route::get('/Articles',Articles::class);
+Route::get('/create/article',CreateArticles::class);
+Route::get('/update/article/{id}',UpdateArticles::class);
 });
 
 require __DIR__.'/auth.php';

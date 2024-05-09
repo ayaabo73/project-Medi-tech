@@ -37,18 +37,24 @@ class ChatBox extends Component
  {
      if (Auth::guard('web')->check()) {
          $auth_id = Auth::guard('web')->user()->id;
-         $this->event_name = "MassageSent2";
+         $this->event_name = "MassageSend2";
          $this->chat_page = "chat2";
 
      } else {
          $auth_id = Auth::guard('doctor')->user()->id;
-         $this->event_name = "MassageSent";
+         $this->event_name = "MassageSend";
          $this->chat_page = "chat";
      }
 
      return [
          "echo-private:$this->chat_page.{$auth_id},$this->event_name" => 'broadcastMassage', 'load_conversationPatient', 'load_conversationDoctor', 'pushMessage'
      ];
+ }
+ public function broadcastMassage($event)
+ {
+     $broadcastMessage = Message::find($event['message']);
+     $broadcastMessage->read = 1;
+     $this->pushMessage($broadcastMessage->id);
  }
 
  public function pushMessage($messageId)
@@ -57,12 +63,7 @@ class ChatBox extends Component
         $this->messages->push($newMessage);
     }
 
-    public function broadcastMassage($event)
-    {
-        $broadcastMessage = Message::find($event['message']);
-        $broadcastMessage->read = 1;
-        $this->pushMessage($broadcastMessage->id);
-    }
+   
 
     public function load_conversationDoctor(Conversation $Conversation , Doctor $receiver)
     { 

@@ -1,11 +1,12 @@
 <?php
 
+use App\Http\Controllers\PatientController;
 use App\Http\Controllers\ProfileController;
-use App\Http\Middleware\RedirectIfAuthenticated;
-use App\Livewire\Admin\Sections;
+use App\Livewire\Appointments\Create;
 use App\Livewire\Chat\CreateChat;
 use App\Livewire\Chat\Main;
-use App\Livewire\Patient\DoctorList;
+use App\Livewire\Diagnosis\Create as DiagnosisCreate;
+use App\Livewire\Symptom\Create as SymptomCreate;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -18,6 +19,7 @@ use Illuminate\Support\Facades\Route;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
+
 
 Route::get('/', function () {
     return view('Patient.patient-welcome');
@@ -43,10 +45,11 @@ Route::middleware('auth')->group(function () {
     Route::get('/Doctors/list',CreateChat::class);
     Route::get('/Doctors/chat',Main::class);
     
-
+  
 
 // ############################################################################
-
+Route::get('/Doctors',Create::class);
+Route::get('/Diagnosis',DiagnosisCreate::class);
 
 require __DIR__.'/auth.php';
 

@@ -2,7 +2,7 @@
 
 namespace App\Livewire\Admin;
 
-
+use App\Models\Doctor;
 use App\Models\Section;
 use Illuminate\Support\Facades\DB;
 use Livewire\Component;
@@ -14,9 +14,9 @@ class Sections extends Component
     use WithPagination;
     use WithFileUploads;
     public function render()
-    { 
+    {   $doctors= Doctor::all();
         $sections= Section::all();
-        return view('livewire.admin.Section',['sections'=>$sections]);
+        return view('livewire.admin.Section',['sections'=>$sections,'doctors'=>$doctors,]);
     }
     
     public function create_section(){

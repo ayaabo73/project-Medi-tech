@@ -2,8 +2,12 @@
 
 use App\Http\Controllers\ProfileController;
 use App\Http\Middleware\RedirectIfAuthenticated;
+use App\Livewire\Admin\Articles;
+use App\Livewire\Admin\CreateArticles;
+use App\Livewire\Admin\UpdateArticles;
 use App\Livewire\Chat\CreateChat;
 use App\Livewire\Chat\Main;
+use App\Livewire\Doctor\Articles as DoctorArticles;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -37,6 +41,9 @@ Route::middleware('auth')->group(function () {
 Route::middleware(['auth:doctor'])->group(function () {
 Route::get('/Patients/list',CreateChat::class);
 Route::get('/Patients/chat',Main::class);
+Route::get('/Articles',DoctorArticles::class);
+Route::get('/create/article',CreateArticles::class);
+Route::get('/update/article/{id}',UpdateArticles::class);
 
 });
 

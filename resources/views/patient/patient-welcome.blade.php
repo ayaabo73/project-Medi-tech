@@ -89,7 +89,7 @@
                                      
                                     </li>
 									
-									<li class="dropdown"><a href="#">Sections</a>
+									<li class="dropdown"><a href="department-section">Sections</a>
 										<ul>
                                             <li><a href="about.html">About Us</a></li>
 											<li><a href="services.html">Services</a></li>
@@ -223,6 +223,211 @@
 		</div>
 	</section>
 	<!-- End Main Slider -->
+	<section class="department-section-three">
+        <div class="image-layer" style="background-image:url(images/background/6.jpg)"></div>
+        <div class="auto-container">
+            <!-- Department Tabs-->
+            <div class="department-tabs tabs-box">
+                <div class="row clearfix">
+                    <!--Column-->
+                    <div class="col-lg-4 col-md-12 col-sm-12">
+                        <!-- Sec Title -->
+                        <div class="sec-title light">
+                            <h2>الاقسام</h2>
+                            <div class="separator"></div>
+                        </div>
+                        <!--Tab Btns-->
+                        <ul class="tab-btns tab-buttons clearfix">
+                            <li data-tab="#tab-urology" class="tab-btn active-btn">قسم المسالك البولية</li>
+                            <li data-tab="#tab-department" class="tab-btn">قسم المخ والأعصاب</li>
+                            <li data-tab="#tab-gastrology" class="tab-btn">قسم أمراض الجهاز الهضمي</li>
+                            <li data-tab="#tab-cardiology" class="tab-btn">قسم أمراض القلب</li>
+                            <li data-tab="#tab-eye" class="tab-btn">قسم العناية بالعيون</li>
+                        </ul>
+                    </div>
+                    <!--Column-->
+                    <div class="col-lg-8 col-md-12 col-sm-12">
+                        <!--Tabs Container-->
+                        <div class="tabs-content">
+
+                            <!-- Tab -->
+                            <div class="tab" id="tab-urology">
+                                <div class="content">
+                                    <h2>قسم المسالك البولية</h2>
+                                    <div class="title">Department of Neurology</div>
+                                    <div class="text">
+                                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo
+                                            ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis
+                                            parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec,
+                                            pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec
+                                            pede justo, fringilla vel, aliquet nec, vulputate eget, arcu.</p>
+                                        <p>Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet
+                                            nec, vulputate eget, arcu.</p>
+                                    </div>
+                                    <div class="two-column row clearfix">
+                                        <div class="column col-lg-6 col-md-6 col-sm-12">
+                                            <h3>01 - Neurology Service</h3>
+                                            <div class="column-text">Lorem ipsum dolor sit amet, consectetuer adipiscing
+                                                elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque
+                                                penatibus
+                                            </div>
+                                        </div>
+                                        <div class="column col-lg-6 col-md-6 col-sm-12">
+                                            <h3>02 - Neurology Service</h3>
+                                            <div class="column-text">Lorem ipsum dolor sit amet, consectetuer adipiscing
+                                                elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque
+                                                penatibus
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <a href="doctors-detail.html" class="theme-btn btn-style-two"><span class="txt">View More</span></a>
+                                </div>
+                            </div>
+
+                            <!-- Tab -->
+                            <div class="tab active-tab" id="tab-department">
+                                <div class="content">
+                                    <h2>Neurology Department</h2>
+                                    <div class="title">Department of Neurology</div>
+                                    <div class="text">
+                                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo
+                                            ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis
+                                            parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec,
+                                            pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec
+                                            pede justo, fringilla vel, aliquet nec, vulputate eget, arcu.</p>
+                                        <p>Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet
+                                            nec, vulputate eget, arcu.</p>
+                                    </div>
+                                    <div class="two-column row clearfix">
+                                        <div class="column col-lg-6 col-md-6 col-sm-12">
+                                            <h3>01 - Neurology Service</h3>
+                                            <div class="column-text">Lorem ipsum dolor sit amet, consectetuer adipiscing
+                                                elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque
+                                                penatibus
+                                            </div>
+                                        </div>
+                                        <div class="column col-lg-6 col-md-6 col-sm-12">
+                                            <h3>02 - Neurology Service</h3>
+                                            <div class="column-text">Lorem ipsum dolor sit amet, consectetuer adipiscing
+                                                elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque
+                                                penatibus
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <a href="doctors-detail.html" class="theme-btn btn-style-two"><span class="txt">View More</span></a>
+                                </div>
+                            </div>
+
+                            <!-- Tab -->
+                            <div class="tab" id="tab-gastrology">
+                                <div class="content">
+                                    <h2>Gastrology Department</h2>
+                                    <div class="title">Department of Neurology</div>
+                                    <div class="text">
+                                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo
+                                            ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis
+                                            parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec,
+                                            pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec
+                                            pede justo, fringilla vel, aliquet nec, vulputate eget, arcu.</p>
+                                        <p>Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet
+                                            nec, vulputate eget, arcu.</p>
+                                    </div>
+                                    <div class="two-column row clearfix">
+                                        <div class="column col-lg-6 col-md-6 col-sm-12">
+                                            <h3>01 - Neurology Service</h3>
+                                            <div class="column-text">Lorem ipsum dolor sit amet, consectetuer adipiscing
+                                                elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque
+                                                penatibus
+                                            </div>
+                                        </div>
+                                        <div class="column col-lg-6 col-md-6 col-sm-12">
+                                            <h3>02 - Neurology Service</h3>
+                                            <div class="column-text">Lorem ipsum dolor sit amet, consectetuer adipiscing
+                                                elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque
+                                                penatibus
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <a href="doctors-detail.html" class="theme-btn btn-style-two"><span class="txt">View More</span></a>
+                                </div>
+                            </div>
+
+                            <!-- Tab -->
+                            <div class="tab" id="tab-cardiology">
+                                <div class="content">
+                                    <h2>Cardiology Department</h2>
+                                    <div class="title">Department of Neurology</div>
+                                    <div class="text">
+                                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo
+                                            ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis
+                                            parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec,
+                                            pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec
+                                            pede justo, fringilla vel, aliquet nec, vulputate eget, arcu.</p>
+                                        <p>Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet
+                                            nec, vulputate eget, arcu.</p>
+                                    </div>
+                                    <div class="two-column row clearfix">
+                                        <div class="column col-lg-6 col-md-6 col-sm-12">
+                                            <h3>01 - Neurology Service</h3>
+                                            <div class="column-text">Lorem ipsum dolor sit amet, consectetuer adipiscing
+                                                elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque
+                                                penatibus
+                                            </div>
+                                        </div>
+                                        <div class="column col-lg-6 col-md-6 col-sm-12">
+                                            <h3>02 - Neurology Service</h3>
+                                            <div class="column-text">Lorem ipsum dolor sit amet, consectetuer adipiscing
+                                                elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque
+                                                penatibus
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <a href="doctors-detail.html" class="theme-btn btn-style-two"><span class="txt">View More</span></a>
+                                </div>
+                            </div>
+
+                            <!-- Tab -->
+                            <div class="tab" id="tab-eye">
+                                <div class="content">
+                                    <h2>Eye Care Department</h2>
+                                    <div class="title">Department of Neurology</div>
+                                    <div class="text">
+                                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo
+                                            ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis
+                                            parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec,
+                                            pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec
+                                            pede justo, fringilla vel, aliquet nec, vulputate eget, arcu.</p>
+                                        <p>Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet
+                                            nec, vulputate eget, arcu.</p>
+                                    </div>
+                                    <div class="two-column row clearfix">
+                                        <div class="column col-lg-6 col-md-6 col-sm-12">
+                                            <h3>01 - Neurology Service</h3>
+                                            <div class="column-text">Lorem ipsum dolor sit amet, consectetuer adipiscing
+                                                elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque
+                                                penatibus
+                                            </div>
+                                        </div>
+                                        <div class="column col-lg-6 col-md-6 col-sm-12">
+                                            <h3>02 - Neurology Service</h3>
+                                            <div class="column-text">Lorem ipsum dolor sit amet, consectetuer adipiscing
+                                                elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque
+                                                penatibus
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <a href="doctors-detail.html" class="theme-btn btn-style-two"><span class="txt">View More</span></a>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <!-- End Department Section -->
 	
 	<!-- Department Section -->
 	<section class="department-section">
@@ -691,241 +896,39 @@
 			
 		</div>
 	</section>
+	<br>
 	<!-- End Team Section -->
-	
-	<!-- FullWidth Section -->
-	<section class="fullwidth-section">
-		<div class="outer-container">
-			<div class="clearfix">
-			
-				<!-- Left Column -->
-				<div class="left-column" style="background-image: url(images/background/1.jpg)">
-					<div class="inner-column clearfix">
-						<div class="content">
-							<div class="icon-box">
-								<span class="icon flaticon-contract-1"></span>
-							</div>
-							<div class="title">Need a Doctor for Check-up?</div>
-							<h2>JUST MAKE AN APPOINTMENT</h2>
-							<a href="contact.html" class="theme-btn btn-style-two"><span class="txt">Get an Appointment</span></a>
-						</div>
-					</div>
-				</div>
+
+	<section class="appointment-section-two">
+        <div class="auto-container">
+            <div class="inner-container">
+           
 				
-				<!-- Right Column -->
-				<div class="right-column">
-					<div class="inner-column">
-						
-						<!-- Upper Box -->
-						<div class="upper-box">
-							<div class="icon flaticon-alarm-clock"></div>
-							<h3>Opening Hours</h3>
-						</div>
-						<ul class="time-list">
-							<li class="clearfix"><span class="left-span pull-left">Monday - Friday</span><span class="right-span pull-right">08:00am - 10:00pm</span></li>
-							<li class="clearfix"><span class="left-span pull-left">Saturday - Sunday</span><span class="right-span pull-right">09:00am - 06:00pm</span></li>
-							<li class="clearfix"><span class="left-span pull-left">Emergency Services</span><span class="right-span pull-right">24 hours Open</span></li>
-						</ul>
-						
-					</div>
-				</div>
-				
-			</div>
-		</div>
-	</section>
-	<!-- End FullWidth Section -->
-	
-	<!-- Testimonial Section -->
-    <section class="testimonial-section">
-    	<div class="auto-container">
-			<!-- Sec Title -->
-			<div class="sec-title centered">
-				<h2>What Patients Saying</h2>
-				<div class="separator"></div>
-			</div>
-        	<div class="testimonial-outer" style="background-image: url(images/background/pattern-4.png)">
-            
-            	<!--Client Testimonial Carousel-->
-                <div class="client-testimonial-carousel owl-carousel owl-theme">
-                
-                    <!--Testimonial Block -->
-                    <div class="testimonial-block">
-                        <div class="inner-box">
-							<div class="quote-icon flaticon-quote"></div>
-                            <div class="text">Medical Centre is a great place to get all of your medical needs. I came in for a check up and did not wait more than 5 minutes before I was seen. I can only imagine the type of service you get for more serious issues. Thanks!</div>
+                  
+                    <!-- Form Column -->
+                    <div class="form-column col-lg-6 col-md-12 col-sm-12">
+                        <div class="inner-column">
+                            <!-- Sec Title -->
+                            <div class="sec-title">
+                                <h2>حجز موعد</h2>
+                                <div class="separator"></div>
+                            </div>
+
+                            <!-- Appointment Form -->
+                            <div class="appointment-form">
+								<livewire:appointments.create/>
+                            </div>
+
                         </div>
                     </div>
-                    
-                    <!--Testimonial Block -->
-                    <div class="testimonial-block">
-                        <div class="inner-box">
-							<div class="quote-icon flaticon-quote"></div>
-                            <div class="text">Medical Centre is a great place to get all of your medical needs. I came in for a check up and did not wait more than 5 minutes before I was seen. I can only imagine the type of service you get for more serious issues. Thanks!</div>
-                        </div>
-                    </div>
-					
-					<!--Testimonial Block -->
-                    <div class="testimonial-block">
-                        <div class="inner-box">
-							<div class="quote-icon flaticon-quote"></div>
-                            <div class="text">Medical Centre is a great place to get all of your medical needs. I came in for a check up and did not wait more than 5 minutes before I was seen. I can only imagine the type of service you get for more serious issues. Thanks!</div>
-                        </div>
-                    </div>
-                    
-                    <!--Testimonial Block -->
-                    <div class="testimonial-block">
-                        <div class="inner-box">
-							<div class="quote-icon flaticon-quote"></div>
-                            <div class="text">Medical Centre is a great place to get all of your medical needs. I came in for a check up and did not wait more than 5 minutes before I was seen. I can only imagine the type of service you get for more serious issues. Thanks!</div>
-                        </div>
-                    </div>
-					
-					<!--Testimonial Block -->
-                    <div class="testimonial-block">
-                        <div class="inner-box">
-							<div class="quote-icon flaticon-quote"></div>
-                            <div class="text">Medical Centre is a great place to get all of your medical needs. I came in for a check up and did not wait more than 5 minutes before I was seen. I can only imagine the type of service you get for more serious issues. Thanks!</div>
-                        </div>
-                    </div>
-					
-					<!--Testimonial Block -->
-                    <div class="testimonial-block">
-                        <div class="inner-box">
-							<div class="quote-icon flaticon-quote"></div>
-                            <div class="text">Medical Centre is a great place to get all of your medical needs. I came in for a check up and did not wait more than 5 minutes before I was seen. I can only imagine the type of service you get for more serious issues. Thanks!</div>
-                        </div>
-                    </div>
-                    
+
                 </div>
-				
-				<!--Product Thumbs Carousel-->
-                <div class="client-thumb-outer">
-                    <div class="client-thumbs-carousel owl-carousel owl-theme">
-                        <div class="thumb-item">
-                            <figure class="thumb-box"><img src="images/resource/author-1.jpg" alt=""></figure>
-							<div class="author-info">
-								<div class="author-name">Max Winchester</div>
-								<div class="designation">Kidny Patient</div>
-							</div>
-                        </div>
-                        <div class="thumb-item">
-                            <figure class="thumb-box"><img src="images/resource/author-2.jpg" alt=""></figure>
-							<div class="author-info">
-								<div class="author-name">Max Winchester</div>
-								<div class="designation">Kidny Patient</div>
-							</div>
-                        </div>
-                        <div class="thumb-item">
-                            <figure class="thumb-box"><img src="images/resource/author-3.jpg" alt=""></figure>
-							<div class="author-info">
-								<div class="author-name">Max Winchester</div>
-								<div class="designation">Kidny Patient</div>
-							</div>
-                        </div>
-                        <div class="thumb-item">
-                            <figure class="thumb-box"><img src="images/resource/author-1.jpg" alt=""></figure>
-							<div class="author-info">
-								<div class="author-name">Max Winchester</div>
-								<div class="designation">Kidny Patient</div>
-							</div>
-                        </div>
-                        <div class="thumb-item">
-                            <figure class="thumb-box"><img src="images/resource/author-2.jpg" alt=""></figure>
-							<div class="author-info">
-								<div class="author-name">Max Winchester</div>
-								<div class="designation">Kidny Patient</div>
-							</div>
-                        </div>
-                        <div class="thumb-item">
-                            <figure class="thumb-box"><img src="images/resource/author-3.jpg" alt=""></figure>
-							<div class="author-info">
-								<div class="author-name">Max Winchester</div>
-								<div class="designation">Kidny Patient</div>
-							</div>
-                        </div>
-                    </div>
-                </div>
-				
-                
             </div>
         </div>
     </section>
-    <!-- End Testimonial Section Two -->
 	
-	<!-- News Section -->
-    <section class="news-section">
-    	<div class="auto-container">
-			<!-- Sec Title -->
-			<div class="sec-title centered">
-				<h2>Latest News & Articals</h2>
-				<div class="separator style-three"></div>
-			</div>
-			<div class="row clearfix">
-				
-				<!-- News Block -->
-				<div class="news-block col-lg-4 col-md-6 col-sm-12">
-					<div class="inner-box wow fadeInLeft" data-wow-delay="0ms" data-wow-duration="1500ms">
-						<div class="image">
-							<div class="category">Artical</div>
-							<a href="blog-detail.html"><img src="images/resource/news-1.jpg" alt="" /></a>
-						</div>
-						<div class="lower-content">
-							<ul class="post-meta">
-								<li><a href="#">03 Comments</a></li>
-								<li><a href="#">June 21, 2018 at 8:12pm</a></li>
-								<li><a href="#">12 Liks</a></li>
-							</ul>
-							<h3><a href="blog-detail.html">Diagnostic Services for Efficient Results Picking Right </a></h3>
-							<div class="text">There are a lot of women that are unaware of the numerous risks associated with their health and eventually ignore the ...</div>
-							<a href="blog-detail.html" class="read-more">Read More</a>
-						</div>
-					</div>
-				</div>
-				
-				<!-- News Block -->
-				<div class="news-block col-lg-4 col-md-6 col-sm-12">
-					<div class="inner-box wow fadeInLeft" data-wow-delay="300ms" data-wow-duration="1500ms">
-						<div class="image">
-							<div class="category">Artical</div>
-							<a href="blog-detail.html"><img src="images/resource/news-2.jpg" alt="" /></a>
-						</div>
-						<div class="lower-content">
-							<ul class="post-meta">
-								<li><a href="#">03 Comments</a></li>
-								<li><a href="#">June 21, 2018 at 8:12pm</a></li>
-								<li><a href="#">12 Liks</a></li>
-							</ul>
-							<h3><a href="blog-detail.html">Reasons to Visit for Heart Specialist Us</a></h3>
-							<div class="text">There are a lot of women that are unaware of the numerous risks associated with their health and eventually ignore the ...</div>
-							<a href="blog-detail.html" class="read-more">Read More</a>
-						</div>
-					</div>
-				</div>
-				
-				<!-- News Block -->
-				<div class="news-block col-lg-4 col-md-6 col-sm-12">
-					<div class="inner-box wow fadeInLeft" data-wow-delay="600ms" data-wow-duration="1500ms">
-						<div class="image">
-							<div class="category">Artical</div>
-							<a href="blog-detail.html"><img src="images/resource/news-3.jpg" alt="" /></a>
-						</div>
-						<div class="lower-content">
-							<ul class="post-meta">
-								<li><a href="#">03 Comments</a></li>
-								<li><a href="#">June 21, 2018 at 8:12pm</a></li>
-								<li><a href="#">12 Liks</a></li>
-							</ul>
-							<h3><a href="blog-detail.html">Preparing for an ECG Tips From Our Diagnosticians</a></h3>
-							<div class="text">There are a lot of women that are unaware of the numerous risks associated with their health and eventually ignore the ...</div>
-							<a href="blog-detail.html" class="read-more">Read More</a>
-						</div>
-					</div>
-				</div>
-				
-			</div>
-		</div>
-	</section>
-	<!-- End News Section -->
+	
+   
 	
 	<!-- Newsletter Section -->
 	<section class="newsletter-section">

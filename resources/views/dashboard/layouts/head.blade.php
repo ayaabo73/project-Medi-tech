@@ -1,3 +1,5 @@
+
+@livewireStyles
 <!-- Title -->
 <title>Medi-tech</title>
 <!-- Favicon -->

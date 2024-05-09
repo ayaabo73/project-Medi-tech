@@ -63,8 +63,8 @@ class SendMessage extends Component
         $this->selected_conversation->save();
         $this->reset('body');
         $this->dispatch('pushMessage', $this->createdMessage->id);
-        $this->dispatch( 'refresh');
-        $this->dispatchSelf('dispatchSentMassage');
+        $this->dispatch('refresh');
+
     }
     public function dispatchSentMassage()
     {
