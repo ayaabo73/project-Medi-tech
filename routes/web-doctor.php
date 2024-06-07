@@ -5,6 +5,9 @@ use App\Http\Middleware\RedirectIfAuthenticated;
 use App\Livewire\Admin\Articles;
 use App\Livewire\Admin\CreateArticles;
 use App\Livewire\Admin\UpdateArticles;
+use App\Livewire\Appointments\Appointment;
+use App\Livewire\Appointments\ConfirmedAppointment;
+use App\Livewire\Appointments\ExpiredAppointment;
 use App\Livewire\Chat\CreateChat;
 use App\Livewire\Chat\Main;
 use App\Livewire\Doctor\Articles as DoctorArticles;
@@ -44,6 +47,9 @@ Route::get('/Patients/chat',Main::class);
 Route::get('/Articles',DoctorArticles::class);
 Route::get('/create/article',CreateArticles::class);
 Route::get('/update/article/{id}',UpdateArticles::class);
+Route::get('/Appointment',Appointment::class);
+Route::get('/ConfirmedAppointment',ConfirmedAppointment::class);
+Route::get('/ExpiredAppointment',ExpiredAppointment::class);
 
 });
 

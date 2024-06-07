@@ -22,6 +22,12 @@
             </div>
           
         </div>
+        <script defer>
+            document.addEventListener("DOMContentLoaded", function(event) {
+                window.Echo.channel("conversation.{{ $Conversation->id }}")
+                    .listen(".ChatMessageEvent", (e) => window.Livewire.dispatch('pushMessage', { messageId: e.messageId }));
+            });
+        </script>
         @endforeach
     </div><!-- main-chat-list -->
 </div>

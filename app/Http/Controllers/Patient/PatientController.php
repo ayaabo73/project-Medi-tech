@@ -1,10 +1,13 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Patient;
+use App\Http\Controllers\Controller;
+use App\Models\Section;
 
 class PatientController extends Controller
 {
-    public function render(){
-    return view('Patient.patient-welcome');
+    public function index(){
+        $sections=Section::all();
+    return view('Patient.patient-welcome',compact('sections'));
     }
 }

@@ -20,12 +20,11 @@
                   
                   {{ session('message') }}
                     
-                  &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; 
+               
                   <button type="button" class="close" data-dismiss="alert" aria-label="close">
                       <span aria-hidden="true">&times;</span> </button>
-                    
-                    
-                   </div>@endif
+                   </div>
+                   @endif
              <form wire:submit="save" enctype="mulipart/form-data">
              
                     <div class="form-group">
@@ -36,9 +35,10 @@
                        </div>
                    
                </div>
-               <div class="modal-footer">
-                  <input type="submit" name="save" value="Add" class="btn btn-primary">
-            </div>
+            
+            <div class="modal-footer">
+                <input type="submit" name="save" value="Add" class="btn btn-primary">
+          </div>
             </form>
         </div>
     </div>

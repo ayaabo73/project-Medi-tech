@@ -1,6 +1,6 @@
 <?php
 
-use App\Http\Controllers\PatientController;
+use App\Http\Controllers\Patient\PatientController;
 use App\Http\Controllers\ProfileController;
 use App\Livewire\Appointments\Create;
 use App\Livewire\Chat\CreateChat;
@@ -21,9 +21,9 @@ use Illuminate\Support\Facades\Route;
 */
 
 
-Route::get('/', function () {
-    return view('Patient.patient-welcome');
-});
+Route::get('/', [PatientController::class, 'index']);
+Route::get('/Sections', [PatientController::class, 'index']);
+
 Route::get('/re', function () {
     return view('auth.register');
 });

@@ -1,4 +1,3 @@
-
 @livewireStyles
 <!-- Title -->
 <title>Medi-tech</title>
@@ -20,3 +19,4 @@
 <link href="{{URL::asset('dashboard/css/style-dark.css')}}" rel="stylesheet">
 <!---Skinmodes css-->
 <link href="{{URL::asset('dashboard/css/skin-modes.css')}}" rel="stylesheet" />
+@vite(['resources/js/app.js'])

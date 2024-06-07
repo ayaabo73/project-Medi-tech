@@ -46,7 +46,7 @@
             <div class="auto-container clearfix">
                 <div class="top-left clearfix">
                     <ul class="list">
-						<li><span class="icon fas fa-envelope"></span>meditech@gmail.comdoctoruser</li>
+						<li><span class="icon fas fa-envelope"></span>meditech@gmail.com</li>
 						<li><span class="icon fas fa-phone"></span> <a href="#"> 335-6789-765</a></li>
 					</ul>
                 </div>
@@ -69,7 +69,7 @@
                 <div class="auto-container clearfix">
                     <!--Info-->
                     <div class="logo-outer">
-                        <div class="logo"><a href="l"><img src="images/logo1.png" alt="" title=""></a></div>
+                        <div class="logo"><a href="{{ url('/') }}"><img src="images/logo1.png" alt="" title=""></a></div>
                     </div>
 
                     <!--Nav Box-->
@@ -89,11 +89,8 @@
                                      
                                     </li>
 									
-									<li class="dropdown"><a href="department-section">Sections</a>
-										<ul>
-                                            <li><a href="about.html">About Us</a></li>
-											<li><a href="services.html">Services</a></li>
-                                        </ul>
+									<li class="dropdown"><a href="Sections">Sections</a>
+									
                                     </li>
 													
 									<li class="dropdown"><a href="#">Fast detection</a>
@@ -223,202 +220,34 @@
 		</div>
 	</section>
 	<!-- End Main Slider -->
-	<section class="department-section-three">
-        <div class="image-layer" style="background-image:url(images/background/6.jpg)"></div>
+	<section class="department-section-three" id="Sections">
+        <div class="image-layer"></div>
         <div class="auto-container">
             <!-- Department Tabs-->
-            <div class="department-tabs tabs-box">
+            <div class="department-tabs tabs-box"id="Sections">
                 <div class="row clearfix">
                     <!--Column-->
                     <div class="col-lg-4 col-md-12 col-sm-12">
                         <!-- Sec Title -->
                         <div class="sec-title light">
-                            <h2>الاقسام</h2>
-                            <div class="separator"></div>
-                        </div>
+                            <h2>Sections</h2>
+						</div>
                         <!--Tab Btns-->
+						@foreach ($sections as $section )
+							
+						
                         <ul class="tab-btns tab-buttons clearfix">
-                            <li data-tab="#tab-urology" class="tab-btn active-btn">قسم المسالك البولية</li>
-                            <li data-tab="#tab-department" class="tab-btn">قسم المخ والأعصاب</li>
-                            <li data-tab="#tab-gastrology" class="tab-btn">قسم أمراض الجهاز الهضمي</li>
-                            <li data-tab="#tab-cardiology" class="tab-btn">قسم أمراض القلب</li>
-                            <li data-tab="#tab-eye" class="tab-btn">قسم العناية بالعيون</li>
+                            <li data-tab="#tab-gastrology" class="tab-btn ">{{ $section->name }}</li>
+
                         </ul>
+						@endforeach
                     </div>
                     <!--Column-->
                     <div class="col-lg-8 col-md-12 col-sm-12">
                         <!--Tabs Container-->
                         <div class="tabs-content">
-
-                            <!-- Tab -->
-                            <div class="tab" id="tab-urology">
                                 <div class="content">
-                                    <h2>قسم المسالك البولية</h2>
-                                    <div class="title">Department of Neurology</div>
-                                    <div class="text">
-                                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo
-                                            ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis
-                                            parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec,
-                                            pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec
-                                            pede justo, fringilla vel, aliquet nec, vulputate eget, arcu.</p>
-                                        <p>Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet
-                                            nec, vulputate eget, arcu.</p>
-                                    </div>
-                                    <div class="two-column row clearfix">
-                                        <div class="column col-lg-6 col-md-6 col-sm-12">
-                                            <h3>01 - Neurology Service</h3>
-                                            <div class="column-text">Lorem ipsum dolor sit amet, consectetuer adipiscing
-                                                elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque
-                                                penatibus
-                                            </div>
-                                        </div>
-                                        <div class="column col-lg-6 col-md-6 col-sm-12">
-                                            <h3>02 - Neurology Service</h3>
-                                            <div class="column-text">Lorem ipsum dolor sit amet, consectetuer adipiscing
-                                                elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque
-                                                penatibus
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <a href="doctors-detail.html" class="theme-btn btn-style-two"><span class="txt">View More</span></a>
-                                </div>
-                            </div>
-
-                            <!-- Tab -->
-                            <div class="tab active-tab" id="tab-department">
-                                <div class="content">
-                                    <h2>Neurology Department</h2>
-                                    <div class="title">Department of Neurology</div>
-                                    <div class="text">
-                                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo
-                                            ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis
-                                            parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec,
-                                            pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec
-                                            pede justo, fringilla vel, aliquet nec, vulputate eget, arcu.</p>
-                                        <p>Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet
-                                            nec, vulputate eget, arcu.</p>
-                                    </div>
-                                    <div class="two-column row clearfix">
-                                        <div class="column col-lg-6 col-md-6 col-sm-12">
-                                            <h3>01 - Neurology Service</h3>
-                                            <div class="column-text">Lorem ipsum dolor sit amet, consectetuer adipiscing
-                                                elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque
-                                                penatibus
-                                            </div>
-                                        </div>
-                                        <div class="column col-lg-6 col-md-6 col-sm-12">
-                                            <h3>02 - Neurology Service</h3>
-                                            <div class="column-text">Lorem ipsum dolor sit amet, consectetuer adipiscing
-                                                elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque
-                                                penatibus
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <a href="doctors-detail.html" class="theme-btn btn-style-two"><span class="txt">View More</span></a>
-                                </div>
-                            </div>
-
-                            <!-- Tab -->
-                            <div class="tab" id="tab-gastrology">
-                                <div class="content">
-                                    <h2>Gastrology Department</h2>
-                                    <div class="title">Department of Neurology</div>
-                                    <div class="text">
-                                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo
-                                            ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis
-                                            parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec,
-                                            pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec
-                                            pede justo, fringilla vel, aliquet nec, vulputate eget, arcu.</p>
-                                        <p>Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet
-                                            nec, vulputate eget, arcu.</p>
-                                    </div>
-                                    <div class="two-column row clearfix">
-                                        <div class="column col-lg-6 col-md-6 col-sm-12">
-                                            <h3>01 - Neurology Service</h3>
-                                            <div class="column-text">Lorem ipsum dolor sit amet, consectetuer adipiscing
-                                                elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque
-                                                penatibus
-                                            </div>
-                                        </div>
-                                        <div class="column col-lg-6 col-md-6 col-sm-12">
-                                            <h3>02 - Neurology Service</h3>
-                                            <div class="column-text">Lorem ipsum dolor sit amet, consectetuer adipiscing
-                                                elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque
-                                                penatibus
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <a href="doctors-detail.html" class="theme-btn btn-style-two"><span class="txt">View More</span></a>
-                                </div>
-                            </div>
-
-                            <!-- Tab -->
-                            <div class="tab" id="tab-cardiology">
-                                <div class="content">
-                                    <h2>Cardiology Department</h2>
-                                    <div class="title">Department of Neurology</div>
-                                    <div class="text">
-                                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo
-                                            ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis
-                                            parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec,
-                                            pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec
-                                            pede justo, fringilla vel, aliquet nec, vulputate eget, arcu.</p>
-                                        <p>Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet
-                                            nec, vulputate eget, arcu.</p>
-                                    </div>
-                                    <div class="two-column row clearfix">
-                                        <div class="column col-lg-6 col-md-6 col-sm-12">
-                                            <h3>01 - Neurology Service</h3>
-                                            <div class="column-text">Lorem ipsum dolor sit amet, consectetuer adipiscing
-                                                elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque
-                                                penatibus
-                                            </div>
-                                        </div>
-                                        <div class="column col-lg-6 col-md-6 col-sm-12">
-                                            <h3>02 - Neurology Service</h3>
-                                            <div class="column-text">Lorem ipsum dolor sit amet, consectetuer adipiscing
-                                                elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque
-                                                penatibus
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <a href="doctors-detail.html" class="theme-btn btn-style-two"><span class="txt">View More</span></a>
-                                </div>
-                            </div>
-
-                            <!-- Tab -->
-                            <div class="tab" id="tab-eye">
-                                <div class="content">
-                                    <h2>Eye Care Department</h2>
-                                    <div class="title">Department of Neurology</div>
-                                    <div class="text">
-                                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo
-                                            ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis
-                                            parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec,
-                                            pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec
-                                            pede justo, fringilla vel, aliquet nec, vulputate eget, arcu.</p>
-                                        <p>Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet
-                                            nec, vulputate eget, arcu.</p>
-                                    </div>
-                                    <div class="two-column row clearfix">
-                                        <div class="column col-lg-6 col-md-6 col-sm-12">
-                                            <h3>01 - Neurology Service</h3>
-                                            <div class="column-text">Lorem ipsum dolor sit amet, consectetuer adipiscing
-                                                elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque
-                                                penatibus
-                                            </div>
-                                        </div>
-                                        <div class="column col-lg-6 col-md-6 col-sm-12">
-                                            <h3>02 - Neurology Service</h3>
-                                            <div class="column-text">Lorem ipsum dolor sit amet, consectetuer adipiscing
-                                                elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque
-                                                penatibus
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <a href="doctors-detail.html" class="theme-btn btn-style-two"><span class="txt">View More</span></a>
-                                </div>
-                            </div>
+						    	<img src="/images/patient/sections.png"> 
 
                         </div>
                     </div>
@@ -910,7 +739,7 @@
                         <div class="inner-column">
                             <!-- Sec Title -->
                             <div class="sec-title">
-                                <h2>حجز موعد</h2>
+                                <h2>Appointment Booking</h2>
                                 <div class="separator"></div>
                             </div>
 

@@ -2,6 +2,7 @@
 
 namespace App\Livewire\Chat;
 
+use App\Events\ChatMessageEvent;
 use App\Events\MassageSend;
 use App\Events\MassageSend2;
 use App\Events\MassageSent;
@@ -59,33 +60,15 @@ class SendMessage extends Component
             'receiver_email' => $this->receviverUser->email,
             'body' => $this->body,
         ]);
+        event(new ChatMessageEvent($this->createdMessage));
         $this->selected_conversation->last_time_message = $this->createdMessage->created_at;
         $this->selected_conversation->save();
         $this->reset('body');
-        $this->dispatch('pushMessage', $this->createdMessage->id);
+        $this->dispatch('pushMessage',$this->createdMessage->id);
         $this->dispatch('refresh');
 
     }
-    public function dispatchSentMassage()
-    {
-        if (Auth::guard('web')->check()) {
-            broadcast(new MassageSend(
-                $this->sender,
-                $this->createdMessage,
-                $this->selected_conversation,
-                $this->receviverUser
-            ));
-        }
-        else{
-            broadcast(new MassageSend2(
-                $this->sender,
-                $this->createdMessage,
-                $this->selected_conversation,
-                $this->receviverUser
-            ));
-        }
-
-    }
+    
    
     public function render()
     {

@@ -51,7 +51,4 @@
     @livewireScripts
     {{ $slot }}
 </main>
-</div>
-    @livewireScripts
-</body>
 </html>

@@ -51,11 +51,11 @@ class CreateChat extends Component
            'conversations_id'=>$createConversation->id,
            'sender_email'=>$this->auth_email,
            'receiver_email'=>$receiver_email,
-           'body'=>'sghhh',
+           'body'=>'Hi',
 
            ]);
            DB::commit();
-
+           return redirect()->to('/Doctors/chat');
         }
 
         catch(\Exception $e ){
@@ -63,7 +63,7 @@ class CreateChat extends Component
 
         }}
     else{
-     dd('yes');
+        return redirect()->to('/Doctors/chat');
     }
       
 
