@@ -30,16 +30,14 @@
 					</div>
 					<div class="col-xl-8 col-lg-7">
 						<div class="card">
-							<a class="main-header-arrow" href="" id="ChatBodyHide"><i class="icon ion-md-arrow-back"></i></a>
+							<a class="main-header-arrow" href="" id="ChatBodyHide">
+								<i class="icon ion-md-arrow-back"></i>
+							</a>
 								
-								
-								<div class="main-chat-body" id="ChatBody">
-				
 							@livewire('chat.chat-box')
-                            @livewire('chat.send-message')
+							@livewire('chat.send-message')
 					
-					</div>
-				</div>
+						</div>
 					</div>
 				</div>
 				<!-- row -->

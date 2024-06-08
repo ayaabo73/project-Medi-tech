@@ -25,7 +25,7 @@
         <script defer>
             document.addEventListener("DOMContentLoaded", function(event) {
                 window.Echo.channel("conversation.{{ $Conversation->id }}")
-                    .listen(".ChatMessageEvent", (e) => window.Livewire.dispatch('pushMessage', { messageId: e.messageId }));
+                    .listen(".new-message", (e) => window.Livewire.dispatch('pushMessage', { messageId: e.messageId }));
             });
         </script>
         @endforeach

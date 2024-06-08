@@ -11,7 +11,7 @@ use Illuminate\Contracts\Broadcasting\ShouldBroadcast;
 use Illuminate\Foundation\Events\Dispatchable;
 use Illuminate\Queue\SerializesModels;
 
-class ChatMessageEvent
+class ChatMessageEvent implements ShouldBroadcast
 {
     use Dispatchable, InteractsWithSockets, SerializesModels;
 
@@ -36,5 +36,10 @@ class ChatMessageEvent
         return [
             "conversation.{$this->conversationId}",
         ];
+    }
+
+    public function broadcastAs(): string
+    {
+        return "new-message";
     }
 }
