@@ -15,40 +15,33 @@
     
             </div><!-- main-chat-header -->
             <div class="main-chat-body" id="ChatBody">
-                <div class="content-inner">
+                <div class="content-inner" style="max-height: 550px; overflow: hidden auto;">
     
                   
-                    <div class="media">
-                        <div class="main-img-user"><img alt="" src="{{URL::asset('dashboard/img/faces/9.jpg')}}"></div>
-                        <div class="media-body">
-
-                            <div class="main-msg-wrapper right">
-                                Hello, my name is RoboDoc, and I will be happy to help diagnose your disease.
+                    @foreach ($messages as $message)
+                        <div class="{{ $message['styles'] }}">
+                            <div class="media-body">
+                                <div class="main-msg-wrapper right">
+                                    {{ $message['content'] }}
+                                </div>
+                                <div>
+                                    <span>{{ $message['time']->diffForHumans() }}</span>
+                                    <a href=""><i class="icon ion-android-more-horizontal"></i></a>
+                                </div>
                             </div>
-                       
-                            <div class="main-msg-wrapper right">
-                                To start, we need to ask some basic questions, tap OK to continue ! 
-                            </div>
-                           
-                            <div>
-                                <span>9:48 am</span> <a href=""><i class="icon ion-android-more-horizontal"></i></a>
-                              
-                            </div>
-                            <br> <br> <br> <br> <br> <br> <br>
-                         
                         </div>
-                     
-                    </div>
+                    @endforeach
                  
                 </div>
             </div>
         </div>
-        <form >
+        <form wire:submit.prevent='sendMessage'>
    
             <div class="main-chat-footer">
                 
-                <input class="form-control"   wire:model="body"placeholder="Type your message here..." type="text">
-                <button class="main-msg-send" type="submit"><i class="far fa-paper-plane"></i></button></div>
+                <input class="form-control" wire:model="body"placeholder="Type your message here..." type="text">
+                <button class="main-msg-send" type="submit"><i class="far fa-paper-plane"></i></button>
+            </div>
         </div>
         </form>
     
