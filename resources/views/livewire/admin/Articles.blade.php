@@ -36,7 +36,7 @@
                          
                         </div>@endif
                     <div class="table-responsive">
-                        <table class="table text-md-nowrap" id="example1">
+                        <table class="table table-striped table-hover">
                             <thead>
                             <tr>
                                 <th></th>
@@ -57,9 +57,9 @@
                                     <td>{{ $article->body }}</td>
                                
                         <td>
-    
                             <button wire:click="update_article({{ $article->id }})" class="btn btn-primary btn-sm"><i class="fa fa-edit"></i></button>
-                        <button type="button" class="btn btn-danger btn-sm" data-toggle="modal" data-target="#delete_article{{$article->id}}"><i class="fa fa-trash"></i></button>
+                            <button type="button" class="btn btn-danger btn-sm" data-toggle="modal" data-target="#delete_article{{$article->id}}"><i class="fa fa-trash"></i></button>
+                            
                         </td>
                     </tr>
                    

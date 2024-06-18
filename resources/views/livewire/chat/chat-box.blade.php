@@ -20,7 +20,7 @@
                             {{$message->body}}
                         </div>
                         <div>
-                            <span>9:48 am</span> <a href=""><i class="icon ion-android-more-horizontal"></i></a>
+                            <span>  {{$message->created_at->shortAbsoluteDiffForHumans()}}</span> <a href=""><i class="icon ion-android-more-horizontal"></i></a>
                         </div>
                     </div>
                 </div>

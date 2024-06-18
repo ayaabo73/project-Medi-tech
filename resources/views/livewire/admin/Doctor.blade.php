@@ -25,7 +25,7 @@
                     
                    </div>@endif
                     <div class="table-responsive">
-                        <table class="table text-md-nowrap" id="example1">
+                        <table class="table table-striped table-hover">
                             <thead>
                             <tr>
                     <th></th>

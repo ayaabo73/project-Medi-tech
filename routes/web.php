@@ -27,6 +27,9 @@ Route::get('/Sections', [PatientController::class, 'index']);
 Route::get('/re', function () {
     return view('auth.register');
 });
+Route::get('/ContactUs', function () {
+    return view('Patient.ContactUs');
+});
 Route::get('/dashboard/patient', function () {
     return view('Patient.dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard.user');

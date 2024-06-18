@@ -60,7 +60,6 @@
                         <td>
     
                             <button wire:click="update_article({{ $article->id }})" class="btn btn-primary btn-sm"><i class="fa fa-edit"></i></button>
-                        </td>
                     </tr>
                    
                   @include('livewire.admin.delete_article')

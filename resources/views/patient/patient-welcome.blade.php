@@ -85,33 +85,31 @@
                             
                             <div class="collapse navbar-collapse clearfix" id="navbarSupportedContent">
                                 <ul class="navigation clearfix">
-                                    <li class="current dropdown"><a href="#">Home</a>
+                                    <li class="item"><a class="link" href="#Home">Home</a>
                                      
                                     </li>
 									
-									<li class="dropdown"><a href="Sections">Sections</a>
+									<li class="item"> <a  class="link" href="#Sections">Sections</a>
 									
                                     </li>
 													
-									<li class="dropdown"><a href="#">Fast detection</a>
+									<li class="item"><a class="link"  href="#Articles">Articles</a>
                                         
                                     </li>
-									<li class="dropdown"><a href="#">Reservations</a>
-                                        <ul>
-                                            <li><a href="department.html">Department</a></li>
-                                            <li><a href="department-detail.html">Department Detail</a></li>
-                                        </ul>
+									<li class="item"><a  class="link" href="#Services">Services</a>
+                                      
                                     </li>
-                                    <li class="dropdown"><a href="#">Articles</a>
+                                    <li class="item"><a class="link" href="#Doctors">Doctors</a>
                                     </li>
-									<li class="dropdown"><a href="#">About us</a>
-                                        <ul>
-                                            <li><a href="about.html">About Us</a></li>
-											<li><a href="services.html">Services</a></li>
-											<li><a href="services.html">Connect with us</a></li>
-                                        </ul>
+									<li class="item"><a  class="link"href="#Appointement">Appointement</a>
+                                        
+                                    </li>
+									
+									<li class="item"><a  class="link"href="{{ url('/ContactUs') }}">Contact Us</a>
+                                        
                                     </li>
                                 </ul>
+
                             </div>
                         </nav>
                         <!-- Main Menu End-->
@@ -179,7 +177,7 @@
     <!-- End Main Header -->
 	
 	<!-- Main Slider -->
-	<section class="main-slider">
+	<section class="main-slider" id="Home">
 		<div class="banner-carousel">
 			<!-- Swiper -->
 			<div class="swiper-wrapper">
@@ -219,47 +217,47 @@
 			<div class="swiper-button-prev"></div>
 		</div>
 	</section>
-	<!-- End Main Slider -->
-	<section class="department-section-three" id="Sections">
-        <div class="image-layer"></div>
-        <div class="auto-container">
-            <!-- Department Tabs-->
-            <div class="department-tabs tabs-box"id="Sections">
-                <div class="row clearfix">
-                    <!--Column-->
-                    <div class="col-lg-4 col-md-12 col-sm-12">
-                        <!-- Sec Title -->
-                        <div class="sec-title light">
-                            <h2>Sections</h2>
-						</div>
-                        <!--Tab Btns-->
-						@foreach ($sections as $section )
-							
+
+	<section  id="Sections">
+	<div class="sidebar-page-container style-two">
+    	<div class="auto-container">
+			<div class="sec-title centered">
+				<h2>Sections</h2>
+				<div class="separator"></div>
+			</div>
+			
+        	<div class="row clearfix">
+            	
+				<!--Sidebar Side-->
+                <div class="sidebar-side col-lg-4 col-md-12 col-sm-12">
+                	
 						
-                        <ul class="tab-btns tab-buttons clearfix">
-                            <li data-tab="#tab-gastrology" class="tab-btn ">{{ $section->name }}</li>
-
-                        </ul>
-						@endforeach
-                    </div>
-                    <!--Column-->
-                    <div class="col-lg-8 col-md-12 col-sm-12">
-                        <!--Tabs Container-->
-                        <div class="tabs-content">
-                                <div class="content">
-						    	<img src="/images/patient/sections.png"> 
-
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-    </section>
-    <!-- End Department Section -->
+						
+						<!--Blog Category Widget-->
+						<div class="sidebar-widget sidebar-blog-category">
+							@foreach ($sections as $section )
+							<ul class="blog-cat">
+								
+								<li><a href="#">{{ $section->name }}</a></li>
+							
+							</ul>
+							@endforeach
+						</div>
+						
+						
+					</aside>
+				</div>
+				
+                <!--Content Side-->
+                <div class="content-side col-lg-8 col-md-12 col-sm-12">
+					<div class="department-detail">
+                        <div class="image-box">
+                            <figure><img src="images/patient/sections.jpg" alt=""></figure>
+                        </div> 
+					</section>
 	
 	<!-- Department Section -->
-	<section class="department-section">
+	<section class="department-section" id="Articles">
 		<div class="auto-container">
 			
 			<!-- Sec Title -->
@@ -269,183 +267,32 @@
 			</div>
 			
 			<div class="services-carousel owl-carousel owl-theme">
-				
+				@foreach ($articles as $article )
 				<!-- Department Block -->
 				<div class="department-block">
 					<div class="inner-box">
 						<div class="upper-box">
-							<div class="icon flaticon-kidneys"></div>
-							<h3><a href="#">Urology</a></h3>
+							<div class="icon flaticon-nurse"></div>
+							<h3><a href="#">{{ $article->title}}</a></h3>
 						</div>
-						<div class="text">Morbi a metus. Phasellus enim erat, vestibulum vel, aliquam a, posuere eu, velit. Nullam sapien sem, ornare ac, nonummy non, lobortis a, enim. </div>
+						<div class="text">{{ $article->body }} </div>
 						<div class="read-outer">
 							<a href="#" class="read-more">Read More <span class="icon fas fa-angle-double-right"></span></a>
 						</div>
 					</div>
 				</div>
 				
-				<!-- Department Block -->
-				<div class="department-block">
-					<div class="inner-box">
-						<div class="upper-box">
-							<div class="icon flaticon-brain"></div>
-							<h3><a href="#">Neurology</a></h3>
-						</div>
-						<div class="text">Morbi a metus. Phasellus enim erat, vestibulum vel, aliquam a, posuere eu, velit. Nullam sapien sem, ornare ac, nonummy non, lobortis a, enim. </div>
-						<div class="read-outer">
-							<a href="#" class="read-more">Read More <span class="icon fas fa-angle-double-right"></span></a>
-						</div>
-					</div>
-				</div>
+
 				
-				<!-- Department Block -->
-				<div class="department-block">
-					<div class="inner-box">
-						<div class="upper-box">
-							<div class="icon flaticon-kidneys"></div>
-							<h3><a href="#">Gastrology</a></h3>
-						</div>
-						<div class="text">Morbi a metus. Phasellus enim erat, vestibulum vel, aliquam a, posuere eu, velit. Nullam sapien sem, ornare ac, nonummy non, lobortis a, enim. </div>
-						<div class="read-outer">
-							<a href="#" class="read-more">Read More <span class="icon fas fa-angle-double-right"></span></a>
-						</div>
-					</div>
-				</div>
-				
-				<!-- Department Block -->
-				<div class="department-block">
-					<div class="inner-box">
-						<div class="upper-box">
-							<div class="icon flaticon-kidneys"></div>
-							<h3><a href="#">Urology</a></h3>
-						</div>
-						<div class="text">Morbi a metus. Phasellus enim erat, vestibulum vel, aliquam a, posuere eu, velit. Nullam sapien sem, ornare ac, nonummy non, lobortis a, enim. </div>
-						<div class="read-outer">
-							<a href="#" class="read-more">Read More <span class="icon fas fa-angle-double-right"></span></a>
-						</div>
-					</div>
-				</div>
-				
-				<!-- Department Block -->
-				<div class="department-block">
-					<div class="inner-box">
-						<div class="upper-box">
-							<div class="icon flaticon-brain"></div>
-							<h3><a href="#">Neurology</a></h3>
-						</div>
-						<div class="text">Morbi a metus. Phasellus enim erat, vestibulum vel, aliquam a, posuere eu, velit. Nullam sapien sem, ornare ac, nonummy non, lobortis a, enim. </div>
-						<div class="read-outer">
-							<a href="#" class="read-more">Read More <span class="icon fas fa-angle-double-right"></span></a>
-						</div>
-					</div>
-				</div>
-				
-				<!-- Department Block -->
-				<div class="department-block">
-					<div class="inner-box">
-						<div class="upper-box">
-							<div class="icon flaticon-kidneys"></div>
-							<h3><a href="#">Gastrology</a></h3>
-						</div>
-						<div class="text">Morbi a metus. Phasellus enim erat, vestibulum vel, aliquam a, posuere eu, velit. Nullam sapien sem, ornare ac, nonummy non, lobortis a, enim. </div>
-						<div class="read-outer">
-							<a href="#" class="read-more">Read More <span class="icon fas fa-angle-double-right"></span></a>
-						</div>
-					</div>
-				</div>
-				
-				<!-- Department Block -->
-				<div class="department-block">
-					<div class="inner-box">
-						<div class="upper-box">
-							<div class="icon flaticon-kidneys"></div>
-							<h3><a href="#">Urology</a></h3>
-						</div>
-						<div class="text">Morbi a metus. Phasellus enim erat, vestibulum vel, aliquam a, posuere eu, velit. Nullam sapien sem, ornare ac, nonummy non, lobortis a, enim. </div>
-						<div class="read-outer">
-							<a href="#" class="read-more">Read More <span class="icon fas fa-angle-double-right"></span></a>
-						</div>
-					</div>
-				</div>
-				
-				<!-- Department Block -->
-				<div class="department-block">
-					<div class="inner-box">
-						<div class="upper-box">
-							<div class="icon flaticon-brain"></div>
-							<h3><a href="#">Neurology</a></h3>
-						</div>
-						<div class="text">Morbi a metus. Phasellus enim erat, vestibulum vel, aliquam a, posuere eu, velit. Nullam sapien sem, ornare ac, nonummy non, lobortis a, enim. </div>
-						<div class="read-outer">
-							<a href="#" class="read-more">Read More <span class="icon fas fa-angle-double-right"></span></a>
-						</div>
-					</div>
-				</div>
-				
-				<!-- Department Block -->
-				<div class="department-block">
-					<div class="inner-box">
-						<div class="upper-box">
-							<div class="icon flaticon-kidneys"></div>
-							<h3><a href="#">Gastrology</a></h3>
-						</div>
-						<div class="text">Morbi a metus. Phasellus enim erat, vestibulum vel, aliquam a, posuere eu, velit. Nullam sapien sem, ornare ac, nonummy non, lobortis a, enim. </div>
-						<div class="read-outer">
-							<a href="#" class="read-more">Read More <span class="icon fas fa-angle-double-right"></span></a>
-						</div>
-					</div>
-				</div>
-				
-			</div>
-			
-		</div>
+			@endforeach
 	</section>
 	<!-- End Department Section -->
 	
 	<!-- Fluid Section One -->
-    <section class="fluid-section-one">
-		<div class="outer-section clearfix">
-        	
-           <!--Image Column-->
-        	<div class="image-column" style="background-image: url(images/resource/image-1.jpg)">
-            	<div class="image">
-                	<img src="images/resource/image-1.jpg" alt="">
-                </div>
-            </div>
-            <!--End Image Column-->
-           
-            <!--Content Column-->
-            <div class="content-column">
-            	<div class="content-box">
-					<div class="sec-title">
-						<h2>Pioneering in Health.</h2>
-						<div class="separator style-two"></div>
-					</div>
-					<div class="text">
-						<p>Our main long-term goal is always achieving complex results for your dental health.  But in the process, we also keep the focus on giving you the best customer service. We're always making our dental office as safe place as possible!</p>
-						<p>Nulla auctor neque non tortor tincidunt fringilla. Nam in condimentum orci. Integer ac pellentesque sem. Nulla fringilla dui id metus viverra interdum.</p>
-					</div>
-					<div class="row clearfix">
-						<div class="column col-lg-6 col-md-6 col-sm-12">
-							<ul class="list-style-one">
-								<li><span class="icon flaticon-medical-stethoscope-variant"></span>Medical Treatment</li>
-								<li><span class="icon flaticon-doctor"></span>Qualified Doctors</li>
-							</ul>
-						</div>
-						<div class="column col-lg-6 col-md-6 col-sm-12">
-							<ul class="list-style-one">
-								<li><span class="icon flaticon-ambulance-side-view"></span>Emergency Help</li>
-								<li><span class="icon flaticon-medical-kit"></span>Medical Professionals</li>
-							</ul>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
+   
 	
 	<!-- Services Section -->
-	<section class="services-section">
+	<section class="services-section" id="Services">
 		<div class="auto-container">
 			
 			<!-- Sec Title -->
@@ -554,86 +401,27 @@
 		</div>
 	</section>
 	
-	<!-- Counter Section -->
-	<section class="counter-section" style="background-image: url(images/background/pattern-3.png)">
-		<div class="auto-container">
-		
-			<!-- Fact Counter -->
-			<div class="fact-counter">
-				<div class="row clearfix">
-
-					<!--Column-->
-					<div class="column counter-column col-lg-3 col-md-6 col-sm-12">
-						<div class="inner wow fadeInLeft" data-wow-delay="0ms" data-wow-duration="1500ms">
-							<div class="content">
-								<div class="count-outer count-box">
-									<span class="count-text" data-speed="2500" data-stop="2350">0</span>
-								</div>
-								<h4 class="counter-title">Satisfied Patients</h4>
-							</div>
-						</div>
-					</div>
-
-					<!--Column-->
-					<div class="column counter-column col-lg-3 col-md-6 col-sm-12">
-						<div class="inner wow fadeInLeft" data-wow-delay="300ms" data-wow-duration="1500ms">
-							<div class="content">
-								<div class="count-outer count-box alternate">
-									+<span class="count-text" data-speed="3000" data-stop="350">0</span>
-								</div>
-								<h4 class="counter-title">Doctor’s Team</h4>
-							</div>
-						</div>
-					</div>
-
-					<!--Column-->
-					<div class="column counter-column col-lg-3 col-md-6 col-sm-12">
-						<div class="inner wow fadeInLeft" data-wow-delay="600ms" data-wow-duration="1500ms">
-							<div class="content">
-								<div class="count-outer count-box">
-									<span class="count-text" data-speed="3000" data-stop="2150">0</span>
-								</div>
-								<h4 class="counter-title">Success Mission</h4>
-							</div>
-						</div>
-					</div>
-					
-					<!--Column-->
-					<div class="column counter-column col-lg-3 col-md-6 col-sm-12">
-						<div class="inner wow fadeInLeft" data-wow-delay="900ms" data-wow-duration="1500ms">
-							<div class="content">
-								<div class="count-outer count-box">
-									+<span class="count-text" data-speed="2500" data-stop="225">0</span>
-								</div>
-								<h4 class="counter-title">Successfull Surgeries</h4>
-							</div>
-						</div>
-					</div>
-
-				</div>
-			</div>
-			
-		</div>
-	</section>
-	<!-- End Counter Section -->
 	
-	<!-- Team Section -->
-	<section class="team-section">
+	<section class="team-section" id="Doctors">
 		<div class="auto-container">
 			
 			<!-- Sec Title -->
 			<div class="sec-title centered">
-				<h2>The Medical Specialists</h2>
+				<h2>The Medical team</h2>
 				<div class="separator"></div>
 			</div>
-			
+
+		
 			<div class="row clearfix">
-				
+				@foreach ($doctors as $doctor )
 				<!-- Team Block -->
 				<div class="team-block col-lg-3 col-md-6 col-sm-6 col-xs-12">
+				
 					<div class="inner-box wow fadeInUp" data-wow-delay="0ms" data-wow-duration="1500ms">
+			
 						<div class="image">
-							<img src="images/resource/team-1.jpg" alt="" />
+						
+							<img src="{{asset('storage/'.$doctor->image) }}" alt="" >
 							<div class="overlay-box">
 								<ul class="social-icons">
 									<li><a href="#"><span class="fab fa-facebook-f"></span></a></li>
@@ -646,128 +434,91 @@
 							</div>
 						</div>
 						<div class="lower-content">
-							<h3><a href="#">Dr. Andria Jonea</a></h3>
-							<div class="designation">Cancer Specialist</div>
+							<h3><a href="#">{{ $doctor->name }}</</a></h3>
+							<div class="designation">{{ $doctor->section->name }}</div>
+						</div>
+					</div>
+				</div>
+				@endforeach
+		
+			
+		</div>
+	
+	</section>
+	<section class="fullwidth-section">
+		<div class="outer-container">
+			<div class="clearfix">
+			</div>
+		</div>
+	</section>
+	<!-- End Team Section -->
+
+
+	
+	<section class="fullwidth-section" id="Appointement">
+		<div class="outer-container">
+			<div class="clearfix">
+			
+				<!-- Left Column -->
+				<div class="sec-title centered">
+					<h2>Appointment Booking</h2>
+			 <div class="separator"></div>
+					</div>
+				<div class="left-column" style="background-image: url(images/background/1.jpg)">
+					<div class="inner-column clearfix">
+						<div class="content">
+							<div class="icon-box">
+								<span class="icon flaticon-contract-1"></span>
+							</div>
+							<div class="title">Need a Doctor for Check-up?</div>
+							<h2>JUST MAKE AN APPOINTMENT</h2>
+							<a href="contact.html" class="theme-btn btn-style-two"><span class="txt">Get an Appointment</span></a>
 						</div>
 					</div>
 				</div>
 				
-				<!-- Team Block -->
-				<div class="team-block col-lg-3 col-md-6 col-sm-6 col-xs-12">
-					<div class="inner-box wow fadeInUp" data-wow-delay="250ms" data-wow-duration="1500ms">
-						<div class="image">
-							<img src="images/resource/team-2.jpg" alt="" />
-							<div class="overlay-box">
-								<ul class="social-icons">
-									<li><a href="#"><span class="fab fa-facebook-f"></span></a></li>
-									<li><a href="#"><span class="fab fa-google"></span></a></li>
-									<li><a href="#"><span class="fab fa-twitter"></span></a></li>
-									<li><a href="#"><span class="fab fa-skype"></span></a></li>
-									<li><a href="#"><span class="fab fa-linkedin-in"></span></a></li>
-								</ul>
-								<a href="#" class="appointment">Make Appointment</a>
-							</div>
+				<!-- Right Column -->
+				<div class="right-column">
+					<div class="inner-column">
+						
+						<!-- Upper Box -->
+						<div class="upper-box">
+							<div class="icon flaticon-alarm-clock"></div>
+							<h3>Opening Hours</h3>
 						</div>
-						<div class="lower-content">
-							<h3><a href="#">Dr. Robet Samith</a></h3>
-							<div class="designation">Heart Surgen</div>
-						</div>
-					</div>
-				</div>
-				
-				<!-- Team Block -->
-				<div class="team-block col-lg-3 col-md-6 col-sm-6 col-xs-12">
-					<div class="inner-box wow fadeInUp" data-wow-delay="500ms" data-wow-duration="1500ms">
-						<div class="image">
-							<img src="images/resource/team-3.jpg" alt="" />
-							<div class="overlay-box">
-								<ul class="social-icons">
-									<li><a href="#"><span class="fab fa-facebook-f"></span></a></li>
-									<li><a href="#"><span class="fab fa-google"></span></a></li>
-									<li><a href="#"><span class="fab fa-twitter"></span></a></li>
-									<li><a href="#"><span class="fab fa-skype"></span></a></li>
-									<li><a href="#"><span class="fab fa-linkedin-in"></span></a></li>
-								</ul>
-								<a href="#" class="appointment">Make Appointment</a>
-							</div>
-						</div>
-						<div class="lower-content">
-							<h3><a href="#">Dr. Sharon Laura</a></h3>
-							<div class="designation">Family Physician</div>
-						</div>
-					</div>
-				</div>
-				
-				<!-- Team Block -->
-				<div class="team-block col-lg-3 col-md-6 col-sm-6 col-xs-12">
-					<div class="inner-box wow fadeInUp" data-wow-delay="750ms" data-wow-duration="1500ms">
-						<div class="image">
-							<img src="images/resource/team-4.jpg" alt="" />
-							<div class="overlay-box">
-								<ul class="social-icons">
-									<li><a href="#"><span class="fab fa-facebook-f"></span></a></li>
-									<li><a href="#"><span class="fab fa-google"></span></a></li>
-									<li><a href="#"><span class="fab fa-twitter"></span></a></li>
-									<li><a href="#"><span class="fab fa-skype"></span></a></li>
-									<li><a href="#"><span class="fab fa-linkedin-in"></span></a></li>
-								</ul>
-								<a href="#" class="appointment">Make Appointment</a>
-							</div>
-						</div>
-						<div class="lower-content">
-							<h3><a href="#">Dr. Alex Furgosen</a></h3>
-							<div class="designation">Ortho Specialist</div>
-						</div>
+						<ul class="time-list">
+							<li class="clearfix"><span class="left-span pull-left">Monday - Friday</span><span class="right-span pull-right">08:00am - 10:00pm</span></li>
+							<li class="clearfix"><span class="left-span pull-left">Saturday - Sunday</span><span class="right-span pull-right">09:00am - 06:00pm</span></li>
+							<li class="clearfix"><span class="left-span pull-left">Emergency Services</span><span class="right-span pull-right">24 hours Open</span></li>
+						</ul>
+						
 					</div>
 				</div>
 				
 			</div>
-			
 		</div>
 	</section>
-	<br>
-	<!-- End Team Section -->
-
-	<section class="appointment-section-two">
-        <div class="auto-container">
-            <div class="inner-container">
-           
-				
-                  
-                    <!-- Form Column -->
-                    <div class="form-column col-lg-6 col-md-12 col-sm-12">
-                        <div class="inner-column">
-                            <!-- Sec Title -->
-                            <div class="sec-title">
-                                <h2>Appointment Booking</h2>
-                                <div class="separator"></div>
-                            </div>
-
-                            <!-- Appointment Form -->
-                            <div class="appointment-form">
-								<livewire:appointments.create/>
-                            </div>
-
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-    </section>
-	
-	
-   
 	
 	<!-- Newsletter Section -->
+	<section class="newsletter-section" >
+		
+			
+		
+	</section>
+	
+				
+			
+			
+		
+	</section>
 	<section class="newsletter-section">
 		<div class="auto-container">
 			<div class="row clearfix">
 				<!-- Title Column -->
 				<div class="title-column col-lg-6 col-md-12 col-sm-12">
 					<div class="inner-column">
-						<h2>Subscribe Our Newsletter</h2>
-						<div class="text">To receive email releases, simply provide us with your email address below.</div>
+						<h2>Need a quik Check-up?</h2>
+						<div class="text">Hello, I will be happy to help diagnose your disease.</div>
 					</div>
 				</div>
 				<!-- Form Column -->
@@ -775,11 +526,14 @@
 					<div class="inner-column">
 						<!-- Subscribe Form -->
 						<div class="subscribe-form">
-							<form method="post" action="contact.html">
+							<form action="{{ route('login') }}" >
 								<div class="form-group">
-									<input type="email" name="email" value="" placeholder="Your Email Address" required>
-									<button type="submit" class="theme-btn btn-style-two"><span class="txt">subscribe</span></button>
+									<input type="email" name="email" value="" placeholder="let's ckeck-up" >
+									
+									<button type="submit" class="theme-btn btn-style-two">ckeck-up</button>
+								
 								</div>
+
 							</form>
 						</div>
 					</div>
@@ -787,10 +541,8 @@
 			</div>
 		</div>
 	</section>
-	<!-- End Newsletter Section -->
-	
 	<!--Main Footer-->
-    <footer class="main-footer" style="background-image: url(images/background/2.jpg)">
+    <footer class="main-footer style-two">
 		<div class="auto-container">
         	<!--Widgets Section-->
             <div class="widgets-section">
@@ -804,9 +556,9 @@
                             <div class="footer-column col-lg-7 col-md-6 col-sm-12">
                                 <div class="footer-widget logo-widget">
 									<div class="logo">
-                                    	<a href="index.html"><img src="images/footer-logo.png" alt="" /></a>
+                                    	<a href="index.html"><img src="images/logo1.png" alt="" /></a>
                                     </div>
-                                    <div class="text">Meditech is a library of health and medical templates with predefined web elements which helps you to build your medical templates best site Provide Comprehensive Quality Care About Medical Care Health Suspendisse metus turpis.</div>
+                                    
 									<ul class="social-icons">
 										<li><a href="#"><span class="fab fa-facebook-f"></span></a></li>
 										<li><a href="#"><span class="fab fa-google"></span></a></li>
@@ -817,60 +569,7 @@
 								</div>
 							</div>
 							
-							<!--Footer Column-->
-                            <div class="footer-column col-lg-5 col-md-6 col-sm-12">
-                                <div class="footer-widget links-widget">
-									<div class="footer-title  clearfix">
-										<h2>Departments</h2>
-										<div class="separator"></div>
-									</div>
-									<ul class="footer-list">
-										<li><a href="#">Surgery & Radiology</a></li>
-										<li><a href="#">Family Medicine</a></li>
-										<li><a href="#">Women’s Health</a></li>
-										<li><a href="#">Optician</a></li>
-										<li><a href="#">Pediatrics</a></li>
-										<li><a href="#">Dermatology</a></li>
-									</ul>
-								</div>
-							</div>
 							
-						</div>
-					</div>
-					
-					<!--big column-->
-                    <div class="big-column col-lg-6 col-md-12 col-sm-12">
-                        <div class="row clearfix">
-							
-							<!--Footer Column-->
-                            <div class="footer-column col-lg-6 col-md-6 col-sm-12">
-                                <div class="footer-widget news-widget">
-									<div class="footer-title  clearfix">
-										<h2>News Update</h2>
-										<div class="separator"></div>
-									</div>
-									
-									<!--News Widget Block-->
-                                    <div class="news-widget-block">
-                                        <div class="widget-inner">
-                                            <div class="image">
-                                                <img src="images/resource/news-image-1.jpg" alt="" />
-                                            </div>
-                                            <h3><a href="blog-detail.html">Integrative Medicine And Cancer Treatment</a></h3>
-                                            <div class="post-date">July 11, 2017</div>
-                                        </div>
-                                    </div>
-									
-									<!--News Widget Block-->
-                                    <div class="news-widget-block">
-                                        <div class="widget-inner">
-                                            <div class="image">
-                                                <img src="images/resource/news-image-2.jpg" alt="" />
-                                            </div>
-                                            <h3><a href="blog-detail.html">Achieving Better Health Care One Patient  Time</a></h3>
-                                            <div class="post-date">July 11, 2018</div>
-                                        </div>
-                                    </div>
 									
 								</div>
 							</div>
@@ -885,8 +584,8 @@
 									
 									<ul class="contact-list">
 										<li><span class="icon flaticon-placeholder"></span>2130 Fulton Street San Diego <br> CA 94117-1080 USA</li>
-										<li><span class="icon flaticon-call"></span>Mon to Fri : 08:30 - 18:00 <br> <a href="tel:+898-68679-575-09">+898 68679 575 09</a></li>
-										<li><span class="icon flaticon-message"></span>Do you have a Question? <a href="mailto:info@gmail.com">info@gmail.com</a></li>
+										<li><span class="icon flaticon-call"></span>Mon to Fri : 08:30 - 18:00 <br> <a href="tel:+898-68679-575-09">335-6789-765</a></li>
+										<li><span class="icon flaticon-message"></span>Do you have a Question? <a href="mailto:info@gmail.com">meditech@gmail.com</a></li>
 									</ul>
 									
 								</div>
@@ -899,81 +598,9 @@
 			</div>
 		</div>
 	
-		<!-- Footer Bottom -->
-		<div class="footer-bottom">
-			<div class="auto-container">
-				<div class="copyright">MediTech Helth Care &copy; All Rights Reserved By Expertthemes</div>
-			</div>
-		</div>
-	
 	</footer>
 	
 </div>  
-<!--End pagewrapper-->
-
-<!--Scroll to top-->
-<div class="scroll-to-top scroll-to-target" data-target="html"><span class="fa fa-angle-up"></span></div>
-
-<!--Search Popup-->
-<div id="search-popup" class="search-popup">
-	<div class="close-search theme-btn"><span class="fas fa-window-close"></span></div>
-	<div class="popup-inner">
-		<div class="overlay-layer"></div>
-    	<div class="search-form">
-        	<form method="post" action="index.html">
-            	<div class="form-group">
-                	<fieldset>
-                        <input type="search" class="form-control" name="search-input" value="" placeholder="Search Here" required >
-                        <input type="submit" value="Search Now!" class="theme-btn">
-                    </fieldset>
-                </div>
-            </form>
-            
-            <br>
-            <h3>Recent Search Keywords</h3>
-            <ul class="recent-searches">
-                <li><a href="#">Business</a></li>
-                <li><a href="#">Web Development</a></li>
-                <li><a href="#">SEO</a></li>
-                <li><a href="#">Logistics</a></li>
-                <li><a href="#">Freedom</a></li>
-            </ul>
-        
-        </div>
-        
-    </div>
-</div>
-
-<!-- Color Palate / Color Switcher -->
-<div class="color-palate">
-    <div class="color-trigger">
-        <i class="fas fa-cog"></i>
-    </div>
-    <div class="color-palate-head">
-        <h6>Choose Your Color</h6>
-    </div>
-    <div class="various-color clearfix">
-        <div class="colors-list">
-            <span class="palate default-color active" data-theme-file="css/color-themes/default-theme.css"></span>
-            <span class="palate green-color" data-theme-file="css/color-themes/green-theme.css"></span>
-            <span class="palate olive-color" data-theme-file="css/color-themes/olive-theme.css"></span>
-            <span class="palate orange-color" data-theme-file="css/color-themes/orange-theme.css"></span>
-            <span class="palate purple-color" data-theme-file="css/color-themes/purple-theme.css"></span>
-            <span class="palate teal-color" data-theme-file="css/color-themes/teal-theme.css"></span>
-            <span class="palate brown-color" data-theme-file="css/color-themes/brown-theme.css"></span>
-            <span class="palate redd-color" data-theme-file="css/color-themes/redd-color.css"></span>
-        </div>
-    </div>
-	
-	<ul class="rtl-version option-box"> <li class="rtl">RTL Version</li> <li>LTR Version</li> </ul>
-
-    <a href="#" class="purchase-btn">Purchase now $17</a>
-    
-    <div class="palate-foo">
-        <span>You will find much more options for colors and styling in admin panel. This color picker is used only for demonstation purposes.</span>
-    </div>
-
-</div>
 
 <!--Scroll to top-->
 <script src="js/jquery.js"></script>
