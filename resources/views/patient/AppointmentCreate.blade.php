@@ -1,3 +1,4 @@
+
 <html lang="en">
 <head>
 <meta charset="utf-8">
@@ -91,10 +92,10 @@
 											</li>
 											<li class="item"><a class="link" href="/">Doctor</a>
 											</li>
-											<li class="item"><a  class="link"href="/">Appointement</a>
+											<li class="item"><a  class="link"href="#">Appointement</a>
 											</li>
 											
-											<li class="item"><a  class="link"href="#">Contact</a>
+											<li class="item"><a  class="link"href="/">Contact</a>
 												
 											</li>
 										</ul>
@@ -167,105 +168,81 @@
 	<!--Page Title-->
     <section class="page-title" style="background-image:url(images/main-slider/a1.jpg);">
         <div class="auto-container">
-            <h1>Contact For MediTech</h1>
-			<div class="text">What We Actually Do?</div>
+            <h1>Need a Doctor for Check-up?</h1>
+			<div class="text">MAKE AN APPOINTMENT</div>
 			<ul class="bread-crumb clearfix">
 				<li><a href="/"><span class="fas fa-home"></span> Home </a></li>
-				<li>Contact us</li>
+				<li>Appointment</li>
 			</ul>
         </div>
     </section>
     <!--End Page Title-->
-	
-	<!-- Contact Page Section -->
-	<section class="contact-page-section">
+	<section class="services-section-three">
 		<div class="auto-container">
-			<div class="sec-title centered">
-				<h2>Now Contact With Us</h2>
-				<div class="separator"></div>
-			</div>
-			
-			<!-- Contact Form -->
-			<div class="contact-form">
+			<div class="row clearfix">
 				
-				<!--Contact Form-->
-				<form method="post" action="#" id="contact-form">
-					<div class="row clearfix">
-					
-						<div class="col-lg-6 col-md-6 col-sm-12 form-group">
-							<input type="text" name="username" placeholder="Name" required>
+				<!-- Services Block Four -->
+				<div class="service-block-four col-lg-4 col-md-6 col-sm-12">
+					<div class="inner-box wow fadeInLeft" data-wow-delay="0ms" data-wow-duration="1500ms">
+						<div class="icon-box">
+							<span class="icon flaticon-timetable"></span>
 						</div>
-						
-						<div class="col-lg-6 col-md-6 col-sm-12 form-group">
-							<input type="email" name="email" placeholder="Email" required>
-						</div>
-						
-						<div class="col-lg-6 col-md-6 col-sm-12 form-group">
-							<input type="text" name="phone" placeholder="Phone" required>
-						</div>
-						
-						<div class="col-lg-6 col-md-6 col-sm-12 form-group">
-							<input type="text" name="department" placeholder="Department" required>
-						</div>
-						
-						<div class="col-lg-12 col-md-12 col-sm-12 form-group">
-							<textarea name="message" placeholder="Your Question"></textarea>
-						</div>
-						
-						<div class="col-lg-12 col-md-12 col-sm-12 text-center form-group">
-							<button class="theme-btn btn-style-two" type="submit" name="submit-form"><span class="txt">Contact Us</span></button>
-						</div>
-						
+						<h4>Hospital Schedule</h4>
+						<ul class="list">
+							<li>Mon - Friday<span>8:00  -  10:30</span></li>
+							<li>Saturday<span>9:00  -  11:00</span></li>
+							<li>Sunday<span>10:30  -  8:30</span></li>
+						</ul>
 					</div>
-				</form>
+				</div>
 				
-				<!--End Contact Form -->
-			
+				<!-- Services Block Four -->
+				<div class="service-block-four col-lg-4 col-md-6 col-sm-12">
+					<div class="inner-box wow fadeInLeft" data-wow-delay="250ms" data-wow-duration="1500ms">
+						<div class="icon-box">
+							<span class="icon flaticon-timetable"></span>
+						</div>
+						<h4>Get Appointment</h4>
+						<div class="text">Lorem Ipsum when an unknown printer took a galley of type and scrambled it to make a type specimen book.</div>
+						<a class="appointment-btn" href="doctors-detail.html">Appointment <span class="icon flaticon-right-arrow-1"></span></a>
+					</div>
+				</div>
+				
+				<!-- Services Block Four -->
+				<div class="service-block-four col-lg-4 col-md-6 col-sm-12">
+					<div class="inner-box wow fadeInLeft" data-wow-delay="500ms" data-wow-duration="1500ms">
+						<div class="icon-box">
+							<span class="icon flaticon-timetable"></span>
+						</div>
+						<h4>Discover Benefits</h4>
+						<ul class="list-two">
+							<li>Experienced Doctors</li>
+							<li>Dedicated Professional Staffs</li>
+							<li>24 Hours Emergency Service</li>
+						</ul>
+					</div>
+				</div>
+				
+			</div>
 		</div>
+	</section>
+	<!-- Contact Page Section -->
+	<section class="get-appointment-section">
+		<div class="auto-container">
+			<div class="inner-container">
+				<h3>Get An Appointment</h3>
+				
+				<!-- Appointment Form -->
+				<div class="appointment-form-two">
+                    <livewire:appointments.create/>
+                </div>
+
+
 	</section>
 	<!-- End Contact Page Section -->
 	
 	<!-- Contact Map Section -->
-    <section class="contact-map-section">
-        <div class="outer-container">
-			<div class="auto-container clearfix">
-				<div class="map-content">
-					<div class="title">Wanna Touch?</div>
-					<h2>Contact Info</h2>
-					<ul class="info-list">
-						<li><span class="icon fas fa-envelope"></span>meditech@gmail.com</li>
-						<li><span class="icon fas fa-phone-volume"></span>335-6789-765</li>
-						<li><span class="icon fas fa-map-marker-alt"></span>9332 Bernier Dam, Miami, USA</li>
-						<li><span class="icon far fa-clock"></span>Mon to Fri : 08:30 - 18:00</li>
-					</ul>
-					
-					<ul class="social-icons">
-						<li><a href="#"><span class="fab fa-facebook-f"></span></a></li>
-						<li><a href="#"><span class="fab fa-google"></span></a></li>
-						<li><a href="#"><span class="fab fa-twitter"></span></a></li>
-						<li><a href="#"><span class="fab fa-skype"></span></a></li>
-						<li><a href="#"><span class="fab fa-linkedin"></span></a></li>
-					</ul>
-					
-				</div>
-			</div>
-            <div class="map-outer">
-                <div class="map-canvas"
-                    data-zoom="12"
-                    data-lat="-37.817085"
-                    data-lng="144.955631"
-                    data-type="roadmap"
-                    data-hue="#ffc400"
-                    data-title="Envato"
-                    data-icon-path="images/icons/map-marker.png"
-                    data-content="Melbourne VIC 3000, Australia<br><a href='mailto:info@youremail.com'>info@youremail.com</a>">
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- End Map Section -->
-	
-	<!-- Newsletter Section -->
+    
 	<section class="newsletter-section style-two">
 		
 	</section>
@@ -359,3 +336,30 @@
 
 </body>
 </html>
+{{-- <section class="appointment-section-two">
+    <div class="auto-container">
+        <div class="inner-container">
+                <!-- Form Column -->
+                <div class="form-column col-lg-6 col-md-12 col-sm-12">
+                    <div class="inner-column">
+                        <!-- Sec Title -->
+                        <div class="sec-title">
+                            <h2>حجز موعد</h2>
+                            <div class="separator"></div>
+                        </div>
+
+                        <!-- Appointment Form -->
+                        <div class="appointment-form">
+                            <livewire:appointments.create/>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+
+ --}}

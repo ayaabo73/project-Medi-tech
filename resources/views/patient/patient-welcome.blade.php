@@ -82,30 +82,28 @@
                                     <span class="icon flaticon-menu"></span>
                                 </button>
                             </div>
-                            
                             <div class="collapse navbar-collapse clearfix" id="navbarSupportedContent">
                                 <ul class="navigation clearfix">
                                     <li class="item"><a class="link" href="#Home">Home</a>
                                      
                                     </li>
 									
-									<li class="item"> <a  class="link" href="#Sections">Sections</a>
+									<li class="item"> <a  class="link" href="#Sections">Section</a>
 									
                                     </li>
 													
-									<li class="item"><a class="link"  href="#Articles">Articles</a>
+									<li class="item"><a class="link"  href="#Articles">Article</a>
                                         
                                     </li>
-									<li class="item"><a  class="link" href="#Services">Services</a>
+									<li class="item"><a  class="link" href="#Services">Service</a>
                                       
                                     </li>
-                                    <li class="item"><a class="link" href="#Doctors">Doctors</a>
+                                    <li class="item"><a class="link" href="#Doctors">Doctor</a>
                                     </li>
 									<li class="item"><a  class="link"href="#Appointement">Appointement</a>
-                                        
                                     </li>
 									
-									<li class="item"><a  class="link"href="{{ url('/ContactUs') }}">Contact Us</a>
+									<li class="item"><a  class="link"href="{{ url('/ContactUs') }}">Contact</a>
                                         
                                     </li>
                                 </ul>
@@ -143,7 +141,7 @@
         	<div class="auto-container clearfix">
             	<!--Logo-->
             	<div class="logo pull-left">
-                	<a href="index.html" class="img-responsive"><img src="images/logo1-small.png" alt="" title=""></a>
+                	<a href="{{ url('/') }}" class="img-responsive"><img src="images/logo1.png" alt="" title=""></a>
                 </div>
                 
 				<!--Right Col-->
@@ -167,7 +165,7 @@
             
             <!--Here Menu Will Come Automatically Via Javascript / Same Menu as in Header-->
             <nav class="menu-box">
-            	<div class="nav-logo"><a href="index.html"><img src="images/nav-logo.png" alt="" title=""></a></div>
+            	<div class="nav-logo"><a href="index.html"><img src="images/nav-logo1.png" alt="" title=""></a></div>
                 
                 <ul class="navigation clearfix"><!--Keep This Empty / Menu will come through Javascript--></ul>
             </nav>
@@ -472,7 +470,7 @@
 							</div>
 							<div class="title">Need a Doctor for Check-up?</div>
 							<h2>JUST MAKE AN APPOINTMENT</h2>
-							<a href="contact.html" class="theme-btn btn-style-two"><span class="txt">Get an Appointment</span></a>
+							<a href="{{ url('/appointment') }}" class="theme-btn btn-style-two"><span class="txt">Get an Appointment</span></a>
 						</div>
 					</div>
 				</div>

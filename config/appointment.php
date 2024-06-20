@@ -1,0 +1,12 @@
+<?php
+return[
+    'days'=>[
+        'Sunday',
+        'Monday',
+        'tuesday',
+        'wednesday',
+        'Thursday',
+        'Friday',
+        'Saturday'
+    ]
+    ];

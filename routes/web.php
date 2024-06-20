@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Patient\PatientController;
 use App\Http\Controllers\ProfileController;
+use App\Livewire\Appointments\Appointment;
 use App\Livewire\Appointments\Create;
 use App\Livewire\Chat\CreateChat;
 use App\Livewire\Chat\Main;
@@ -30,6 +31,11 @@ Route::get('/re', function () {
 Route::get('/ContactUs', function () {
     return view('Patient.ContactUs');
 });
+Route::get('/appointment', function () {
+    return view('Patient.AppointmentCreate');
+});
+
+
 Route::get('/dashboard/patient', function () {
     return view('Patient.dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard.user');

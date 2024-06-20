@@ -14,11 +14,14 @@ class Create extends Component
     public $doctor;
     public $section;
     public $name;
+    public $age;
+    public $Gende;
+    public $appointment;
+    public $time;
     public $section_id;
     public $doctor_id;
     public $email;
     public $phone;
-    public $notes;
     public $message= false;
     
 
@@ -49,6 +52,9 @@ class Create extends Component
         $appointments->doctorID = $this->doctor_id;
         $appointments->sectionID = $this->section_id;
         $appointments->name = $this->name;
+        $appointments->age = $this->age;
+        $appointments->Gende= $this->Gende;
+        $appointments->time = $this->time;
         $appointments->email = $this->email;
         $appointments->phone = $this->phone;
         $appointments->appointment = $this->appointment;
