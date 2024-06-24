@@ -3,6 +3,8 @@
 namespace App\Livewire\Appointments;
 
 use App\Models\Appointment as ModelsAppointment;
+use App\Models\AppointmentHour;
+use Carbon\CarbonPeriod;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Livewire\Component;
@@ -19,8 +21,9 @@ class Appointment extends Component
 
     public function render()
     {
-        $appointments = ModelsAppointment::where('type','Appointment')->where('doctorID',$this->auth_id)->get();
-        return view('livewire.appointments.appointment',['appointments'=> $appointments]);
+        $appointmenthour=AppointmentHour::all();
+       
+        return view('livewire.appointments.appointment',);
     }
 
 

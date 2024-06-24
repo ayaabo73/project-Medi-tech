@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Appointment as ControllersAppointment;
 use App\Http\Controllers\Patient\PatientController;
 use App\Http\Controllers\ProfileController;
 use App\Livewire\Appointments\Appointment;
@@ -31,9 +32,7 @@ Route::get('/re', function () {
 Route::get('/ContactUs', function () {
     return view('Patient.ContactUs');
 });
-Route::get('/appointment', function () {
-    return view('Patient.AppointmentCreate');
-});
+Route::get('/appointment',[ControllersAppointment::class, 'index']);
 
 
 Route::get('/dashboard/patient', function () {

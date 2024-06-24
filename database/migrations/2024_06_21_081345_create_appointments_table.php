@@ -11,13 +11,15 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('appointment_hours', function (Blueprint $table) {
+        Schema::create('appointments', function (Blueprint $table) {
             $table->id();
-            $table->string('day');
-            $table->time('from');
-            $table->time('to');
-            $table->unsignedInteger('step')->default(60);
-            $table->boolean('off')->default(false);
+            $table->string('name');
+            $table->string('age');
+            $table->string('gender');
+            $table->string('email');
+            $table->date('date');
+            $table->time('time');
+            $table->foreignId('doctors_id')->constrained('doctors')->onDelete('cascade');
             $table->timestamps();
         });
     }
@@ -27,6 +29,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('appointment_hours');
+        Schema::dropIfExists('appointments');
     }
 };

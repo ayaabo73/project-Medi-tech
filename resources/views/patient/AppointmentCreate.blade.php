@@ -177,55 +177,8 @@
         </div>
     </section>
     <!--End Page Title-->
-	<section class="services-section-three">
-		<div class="auto-container">
-			<div class="row clearfix">
-				
-				<!-- Services Block Four -->
-				<div class="service-block-four col-lg-4 col-md-6 col-sm-12">
-					<div class="inner-box wow fadeInLeft" data-wow-delay="0ms" data-wow-duration="1500ms">
-						<div class="icon-box">
-							<span class="icon flaticon-timetable"></span>
-						</div>
-						<h4>Hospital Schedule</h4>
-						<ul class="list">
-							<li>Mon - Friday<span>8:00  -  10:30</span></li>
-							<li>Saturday<span>9:00  -  11:00</span></li>
-							<li>Sunday<span>10:30  -  8:30</span></li>
-						</ul>
-					</div>
-				</div>
-				
-				<!-- Services Block Four -->
-				<div class="service-block-four col-lg-4 col-md-6 col-sm-12">
-					<div class="inner-box wow fadeInLeft" data-wow-delay="250ms" data-wow-duration="1500ms">
-						<div class="icon-box">
-							<span class="icon flaticon-timetable"></span>
-						</div>
-						<h4>Get Appointment</h4>
-						<div class="text">Lorem Ipsum when an unknown printer took a galley of type and scrambled it to make a type specimen book.</div>
-						<a class="appointment-btn" href="doctors-detail.html">Appointment <span class="icon flaticon-right-arrow-1"></span></a>
-					</div>
-				</div>
-				
-				<!-- Services Block Four -->
-				<div class="service-block-four col-lg-4 col-md-6 col-sm-12">
-					<div class="inner-box wow fadeInLeft" data-wow-delay="500ms" data-wow-duration="1500ms">
-						<div class="icon-box">
-							<span class="icon flaticon-timetable"></span>
-						</div>
-						<h4>Discover Benefits</h4>
-						<ul class="list-two">
-							<li>Experienced Doctors</li>
-							<li>Dedicated Professional Staffs</li>
-							<li>24 Hours Emergency Service</li>
-						</ul>
-					</div>
-				</div>
-				
-			</div>
-		</div>
-	</section>
+	
+	
 	<!-- Contact Page Section -->
 	<section class="get-appointment-section">
 		<div class="auto-container">

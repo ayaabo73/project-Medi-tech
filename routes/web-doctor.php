@@ -1,11 +1,11 @@
 <?php
 
 use App\Http\Controllers\ProfileController;
-use App\Http\Middleware\RedirectIfAuthenticated;
 use App\Livewire\Admin\Articles;
 use App\Livewire\Admin\CreateArticles;
 use App\Livewire\Admin\UpdateArticles;
 use App\Livewire\Appointments\Appointment;
+use App\Livewire\Appointments\AppointmentHour;
 use App\Livewire\Appointments\ConfirmedAppointment;
 use App\Livewire\Appointments\ExpiredAppointment;
 use App\Livewire\Chat\CreateChat;
@@ -50,6 +50,7 @@ Route::get('/update/article/{id}',UpdateArticles::class);
 Route::get('/Appointment',Appointment::class);
 Route::get('/ConfirmedAppointment',ConfirmedAppointment::class);
 Route::get('/ExpiredAppointment',ExpiredAppointment::class);
+Route::get('/AppointmentHour',AppointmentHour::class);
 
 });
 

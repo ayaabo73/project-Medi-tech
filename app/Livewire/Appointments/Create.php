@@ -3,8 +3,12 @@
 namespace App\Livewire\Appointments;
 
 use App\Models\Appointment;
+use App\Models\AppointmentHour;
+use App\Models\Days;
 use App\Models\Doctor;
 use App\Models\Section;
+use Carbon\CarbonInterval;
+use Illuminate\Support\Facades\Auth;
 use Livewire\Component;
 
 class Create extends Component
@@ -21,8 +25,11 @@ class Create extends Component
     public $section_id;
     public $doctor_id;
     public $email;
-    public $phone;
     public $message= false;
+    public $appointments;
+    public $times;
+    public $days;
+   
     
 
     public function mount()
@@ -30,12 +37,15 @@ class Create extends Component
 
       $this->sections = Section::get();
       $this->doctors = [];
-
+      $this->doctors = Doctor::get();
+      $this->appointments= [];
+      $this->times = [];
+      $this->days=Days::get();
     }
    
     public function render()
     {
-       
+        
         return view('livewire.appointments.create');
     }
 
@@ -45,6 +55,21 @@ class Create extends Component
             ->pluck('name', 'id')
             ->toArray();
     }
+    public function reloadAppointment()
+    {   
+        $this->appointments = AppointmentHour::where('doctors_id', $this->doctor_id)
+            ->pluck('day_id', 'id')
+            ->toArray();
+          
+    }
+    public function reloadTime()
+    {
+        $this->times = AppointmentHour::where('day_id',$this->appointments)
+            ->pluck('from', 'id')
+            ->toArray();
+    }
+   
+
 
      public function store(){
 
@@ -56,7 +81,6 @@ class Create extends Component
         $appointments->Gende= $this->Gende;
         $appointments->time = $this->time;
         $appointments->email = $this->email;
-        $appointments->phone = $this->phone;
         $appointments->appointment = $this->appointment;
         $appointments->notes = $this->notes;
         $appointments->save();

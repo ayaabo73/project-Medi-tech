@@ -5,13 +5,12 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Appointment extends Model
+class Days extends Model
 {
     use HasFactory;
-    protected $guarded= [];
+    protected  $fillable=['day'];
     
-    public function doctor(){
-        return $this->belongsTo(Doctor::class,'doctors_id','id');
+    public function hours(){
+        return $this->hasMany(days::class,'doctors_id','id');
     }
-   
 }

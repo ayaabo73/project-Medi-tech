@@ -13,14 +13,7 @@ class AppointmentHourSeeder extends Seeder
      */
     public function run(): void
     {
-       $days=config('appointment.days');
-       foreach( $days as $day){
-        AppointmentHour::query()->updateOrCreate(['day'=>$day],
-        [
-            'from'=>"09:00",
-            'to'=>'13:00',
-            'step'=>30
-        ]);
+      //
        }
-    }
+    
 }

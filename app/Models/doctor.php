@@ -21,6 +21,9 @@ class Doctor extends Authenticatable
     public function section(){
         return $this->belongsTo(Section::class,'sections_id','id');
     }
+    public function hours(){
+        return $this->hasMany(AppointmentHour::class,'doctors_id','id');
+    }
    
     
 }

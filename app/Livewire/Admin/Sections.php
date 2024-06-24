@@ -13,10 +13,13 @@ class Sections extends Component
 {
     use WithPagination;
     use WithFileUploads;
+
+    
+
     public function render()
-    {   $doctors= Doctor::all();
-        $sections= Section::all();
-        return view('livewire.admin.Section',['sections'=>$sections,'doctors'=>$doctors,]);
+    {    $sections= Section::all();
+     
+        return view('livewire.admin.Section',['sections'=>$sections]);
     }
     
     public function create_section(){

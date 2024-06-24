@@ -16,7 +16,7 @@ class DatabaseSeeder extends Seeder
             Patient::class,
             Admin::class,
             AppointmentHourSeeder::class,
-           
+            DaysSeeder::class,
            ]);
     }
 }
