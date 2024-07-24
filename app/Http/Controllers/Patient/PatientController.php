@@ -14,4 +14,9 @@ class PatientController extends Controller
         $doctors=Doctor::all();
     return view('Patient.patient-welcome',compact('sections','articles','doctors'));
     }
+    public function artical(){
+       
+        $articles=Article::all();
+    return view('Patient.Artical',compact('articles'));
+    }
 }

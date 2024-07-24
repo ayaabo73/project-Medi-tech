@@ -7,7 +7,35 @@
                 <h6>{{$receviverUser->name}}</h6>
             </div>
             <nav class="nav">
-                <a class="nav-link" href=""><i class="icon ion-md-more"></i></a> <a class="nav-link" data-toggle="tooltip" href="" title="Call"><i class="icon ion-ios-call"></i></a> <a class="nav-link" data-toggle="tooltip" href="" title="Archive"><i class="icon ion-ios-filing"></i></a> <a class="nav-link" data-toggle="tooltip" href="" title="Trash"><i class="icon ion-md-trash"></i></a> <a class="nav-link" data-toggle="tooltip" href="" title="View Info"><i class="icon ion-md-information-circle"></i></a>
+                <ul class="ah-actions actions align-items-center">
+                    <li class="call-icon">
+                        <a href="" class="d-done d-md-block phone-button" data-toggle="modal" data-target="#audiomodal">
+                            <i class="si si-phone"></i>
+                        </a>
+                    </li>
+                    <li class="video-icon">
+                        <a href="" class="d-done d-md-block phone-button" data-toggle="modal" data-target="#videomodal">
+                            <i class="si si-camrecorder"></i>
+                        </a>
+                    </li>
+                    <li class="dropdown">
+                        <a href="" data-toggle="dropdown" aria-expanded="true">
+                            <i class="si si-options-vertical"></i>
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-right">
+                            <li><i class="fa fa-user-circle"></i> View profile</li>
+                            <li><i class="fa fa-users"></i>Add friends</li>
+                            <li><i class="fa fa-plus"></i> Add to group</li>
+                            <li><i class="fa fa-ban"></i> Block</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href=""  class="" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true"><i class="si si-close text-black"></i></span>
+                        </a>
+                    </li>
+                </ul>
+               
             </nav>
         </div><!-- main-chat-header -->
         <div class="main-chat-body" id="ChatBody" style="overflow: hidden auto">

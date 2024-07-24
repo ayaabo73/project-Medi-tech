@@ -100,11 +100,12 @@
                                     </li>
                                     <li class="item"><a class="link" href="#Doctors">Doctor</a>
                                     </li>
-									<li class="item"><a  class="link"href="#Appointement">Appointement</a>
-                                    </li>
+									
 									
 									<li class="item"><a  class="link"href="{{ url('/ContactUs') }}">Contact</a>
                                         
+                                    </li>
+									<li class="item"><a  class="link"href="#"></a>
                                     </li>
                                 </ul>
 
@@ -453,60 +454,8 @@
 
 
 	
-	<section class="fullwidth-section" id="Appointement">
-		<div class="outer-container">
-			<div class="clearfix">
-			
-				<!-- Left Column -->
-				<div class="sec-title centered">
-					<h2>Appointment Booking</h2>
-			 <div class="separator"></div>
-					</div>
-				<div class="left-column" style="background-image: url(images/background/1.jpg)">
-					<div class="inner-column clearfix">
-						<div class="content">
-							<div class="icon-box">
-								<span class="icon flaticon-contract-1"></span>
-							</div>
-							<div class="title">Need a Doctor for Check-up?</div>
-							<h2>JUST MAKE AN APPOINTMENT</h2>
-							<a href="{{ url('/appointment') }}" class="theme-btn btn-style-two"><span class="txt">Get an Appointment</span></a>
-						</div>
-					</div>
-				</div>
-				
-				<!-- Right Column -->
-				<div class="right-column">
-					<div class="inner-column">
-						
-						<!-- Upper Box -->
-						<div class="upper-box">
-							<div class="icon flaticon-alarm-clock"></div>
-							<h3>Opening Hours</h3>
-						</div>
-						<ul class="time-list">
-							<li class="clearfix"><span class="left-span pull-left">Monday - Friday</span><span class="right-span pull-right">08:00am - 10:00pm</span></li>
-							<li class="clearfix"><span class="left-span pull-left">Saturday - Sunday</span><span class="right-span pull-right">09:00am - 06:00pm</span></li>
-							<li class="clearfix"><span class="left-span pull-left">Emergency Services</span><span class="right-span pull-right">24 hours Open</span></li>
-						</ul>
-						
-					</div>
-				</div>
-				
-			</div>
-		</div>
-	</section>
 	
-	<!-- Newsletter Section -->
-	<section class="newsletter-section" >
-		
-			
-		
-	</section>
 	
-				
-			
-			
 		
 	</section>
 	<section class="newsletter-section">
@@ -554,7 +503,7 @@
                             <div class="footer-column col-lg-7 col-md-6 col-sm-12">
                                 <div class="footer-widget logo-widget">
 									<div class="logo">
-                                    	<a href="index.html"><img src="images/logo1.png" alt="" /></a>
+                                    	<a href="/"><img src="images/logo1.png" alt="" /></a>
                                     </div>
                                     
 									<ul class="social-icons">

@@ -65,12 +65,11 @@ class Create extends Component
     public function reloadTime()
     {
         $this->times = AppointmentHour::where('day_id',$this->appointments)
-            ->pluck('from', 'id')
+            ->pluck('from','id')
             ->toArray();
     }
    
-
-
+  
      public function store(){
 
         $appointments=new Appointment();

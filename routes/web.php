@@ -29,6 +29,11 @@ Route::get('/Sections', [PatientController::class, 'index']);
 Route::get('/re', function () {
     return view('auth.register');
 });
+Route::get('/dashboardpatient', function () {
+    return view('Patient.dashboard');
+});
+Route::get('/Articals', [PatientController::class, 'artical']);
+
 Route::get('/ContactUs', function () {
     return view('Patient.ContactUs');
 });
