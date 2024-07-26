@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Doctor\DoctorController;
 use App\Http\Controllers\ProfileController;
 use App\Livewire\Admin\Articles;
 use App\Livewire\Admin\CreateArticles;
@@ -28,9 +29,8 @@ Route::get('/', function () {
 });
 
  
-Route::get('/dashboard/doctor', function () {
-    return view('Doctor.dashboard');
-})->middleware(['auth:doctor', 'verified'])->name('dashboard.doctor');
+Route::get('/dashboard/doctor', [DoctorController::class, 'index'])
+->middleware(['auth:doctor', 'verified'])->name('dashboard.doctor');
 
 
 Route::middleware('auth')->group(function () {

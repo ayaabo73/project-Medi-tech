@@ -19,4 +19,5 @@ class PatientController extends Controller
         $articles=Article::all();
     return view('Patient.Artical',compact('articles'));
     }
+   
 }

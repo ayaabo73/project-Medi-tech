@@ -14,17 +14,16 @@
 					<div class="left-content">
 						<div>
 						  <h2 class="main-content-title tx-24 mg-b-1 mg-b-lg-1">Hi, welcome back {{Auth::user()->name}}</h2>
-						  <p class="mg-b-0">what do we have today?</p>
+						  <p class="mg-b-0">let us help you</p>
 						</div>
 					
 					
 				<!-- /breadcrumb -->
 @endsection
 @section('content')
-				<!-- row -->
+<div class="row">
+<img src="/images/patient/home.gif"  width="1349" height="544"> 
 
-			
-		<!-- /main-content -->
 @endsection
 
 @section('js')
