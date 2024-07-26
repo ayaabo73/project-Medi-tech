@@ -25,8 +25,8 @@
                     
                    </div>@endif
                     <div class="table-responsive">
-                        <table class="table table-striped table-hover">
-                            <thead>
+                        <div class=""><table class="table">
+                            <thead class="table-light">
                             <tr>
                     <th></th>
                     <th>Image</th>

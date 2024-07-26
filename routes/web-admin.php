@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Admin\AdminController;
 use App\Http\Controllers\ProfileController;
 use App\Livewire\Admin\Articles;
 use App\Livewire\Admin\CreateArticles;
@@ -26,10 +27,8 @@ Route::get('/', function () {
     return view('Admin.admin-welcome');
 });
 
-
-Route::get('/dashboard/admin', function () {
-    return view('Admin.dashboard');
-})->middleware(['auth:admin', 'verified'])->name('dashboard.admin');
+Route::get('/dashboard/admin', [AdminController::class, 'index'])
+->middleware(['auth:admin', 'verified'])->name('dashboard.admin');
 
 
 

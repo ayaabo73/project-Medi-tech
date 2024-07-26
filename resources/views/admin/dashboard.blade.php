@@ -10,12 +10,59 @@
 				<div class="breadcrumb-header justify-content-between">
 					<div class="left-content">
 						<div>
-						  <h2 class="main-content-title tx-24 mg-b-1 mg-b-lg-1">Hi, welcome back admin!</h2>
-						  <p class="mg-b-0">Sales monitoring dashboard template.</p>
+						  <h2 class="main-content-title tx-24 mg-b-1 mg-b-lg-1">Hi, welcome back admin {{ Auth::user()->name }}</h2>
+						  <p class="mg-b-0">what do we have today?</p>
 						</div>
 					
-					
+					<br>	<br>	<br>
 				<!-- /breadcrumb -->
+@endsection
+@section('content')
+<div class="row">
+	 <div class="card" style="width: 18rem;">
+	<div class="card-body">
+	<h5 class="card-title">Patient &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
+		<i class="fas fa-address-card"></i></h5>  
+	  <p class="card-text">{{$patient }}</p>
+	  <div class="progress" role="progressbar" aria-label="Danger example" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
+		<div class="progress-bar bg-danger" style="width: 50%"></div>
+	  </div>
+	</div>
+  </div>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
+  <div class="card" style="width: 18rem;">
+	<div class="card-body">
+	  <h5 class="card-title">Doctors&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
+		<i class="fas fa-user-md"></i></h5>  
+	  <p class="card-text"> {{ $doctors}}</p>
+	  <div class="progress" role="progressbar" aria-label="Success example" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
+		<div class="progress-bar bg-success" style="width: 60%"></div>
+	  </div>
+	</div>
+  </div>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
+  <div class="card" style="width: 18rem;">
+	<div class="card-body">
+	  <h5 class="card-title">Sections&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
+		<i class="fas fa-hospital"></i></h5>  
+	  <p class="card-text">{{ $sections}}</p>
+	  <div class="progress" role="progressbar" aria-label="Info example" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
+		<div class="progress-bar bg-info" style="width: 75%"></div>
+	  </div>
+	</div>
+  </div>
+  <div class="card" style="width: 18rem;">
+	<div class="card-body">
+	  <h5 class="card-title">Article&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
+		<i class="fas fa-file-alt"></i></h5>  
+	  <p class="card-text">{{ $articles}}</p>
+  <div class="progress" role="progressbar" aria-label="Warning example" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+	<div class="progress-bar bg-warning" style="width: 30%"></div>
+  </div>
+	</div>
+  </div>
+  
+
+			
+		<!-- Container closed -->
 @endsection
 @section('content')
 				<!-- row -->

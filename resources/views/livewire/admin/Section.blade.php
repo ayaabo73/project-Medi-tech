@@ -25,8 +25,8 @@
                     
                    </div>@endif
                     <div class="table-responsive">
-                        <table class="table table-striped table-hover">
-                            <thead>
+                        <div class=""><table class="table">
+                            <thead class="table-light">
                             <tr>
                     <th></th>
                     <th>Name</th>
@@ -42,7 +42,7 @@
                     <tr>
                         <td>{{ $section->id}}</td>
                         <td>{{ $section->name }}</td> 
-                        <td>{{ $section->doctor}}</td>
+                        <td>{{ $section->doctors->pluck('name')}}</td>
                         <td>{{ $section->created_at}}</td>
                         <td>
                         <button wire:click="update_section({{ $section->id }})" class="btn btn-primary btn-sm"><i class="fa fa-edit"></i></button>

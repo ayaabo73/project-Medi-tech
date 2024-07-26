@@ -8,7 +8,24 @@
 {{-- <img src="/images/patient/home.GIF" width="2000" height="700"> --}}
 
 @endsection
+@section('page-header')
+				<!-- breadcrumb -->
+				<div class="breadcrumb-header justify-content-between">
+					<div class="left-content">
+						<div>
+						  <h2 class="main-content-title tx-24 mg-b-1 mg-b-lg-1">Hi, welcome back {{Auth::user()->name}}</h2>
+						  <p class="mg-b-0">what do we have today?</p>
+						</div>
+					
+					
+				<!-- /breadcrumb -->
+@endsection
+@section('content')
+				<!-- row -->
 
+			
+		<!-- /main-content -->
+@endsection
 
 @section('js')
 <!--Internal  Chart.bundle js -->

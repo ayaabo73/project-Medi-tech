@@ -62,7 +62,7 @@ class SendMessage extends Component
         
         // $this->dispatch('pushMessage',$this->createdMessage->id);
         $this->dispatch('refresh');
-        $this->reset('body');
+        $this->dispatch('clear-message');
     }
     
    

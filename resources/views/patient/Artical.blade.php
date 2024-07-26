@@ -8,7 +8,36 @@
 {{-- <img src="/images/patient/home.GIF" width="2000" height="700"> --}}
 
 @endsection
+@section('page-header')
+				<!-- breadcrumb -->
+				<div class="breadcrumb-header justify-content-between">
+					<div class="left-content">
+						<div>
+						  <h2 class="main-content-title tx-24 mg-b-1 mg-b-lg-1">Health Articles</h2>
+						  
+						</div>
+					
+					
+				<!-- /breadcrumb -->
+@endsection
+@section('content')
 
+        <br><br>
+      
+
+<div class="row">
+    @foreach ($articles as $article )
+    <div class="card" style="width: 18rem;">
+   <div class="card-body">
+   <h5 class="card-title">{{ $article->title}}</h5>  
+     <p class="card-text">{{ $article->body }}</p>
+     <div class="read-outer">
+        <a href="#" class="read-more">Read More <span class="icon fas fa-angle-double-right"></span></a>
+    </div>
+   </div>
+ </div>&ensp;&ensp;&ensp;&ensp;&ensp; @endforeach
+
+@endsection
 
 @section('js')
 <!--Internal  Chart.bundle js -->

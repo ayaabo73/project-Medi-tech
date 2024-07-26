@@ -17,7 +17,7 @@ class Sections extends Component
     
 
     public function render()
-    {    $sections= Section::all();
+    {    $sections=Section::with('doctors')->get();
      
         return view('livewire.admin.Section',['sections'=>$sections]);
     }

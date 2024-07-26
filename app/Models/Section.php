@@ -11,7 +11,7 @@ class Section extends Model
     protected  $fillable=[
         'name',
     ];
-    public function doctor(){
+    public function doctors(){
         return $this->hasMany(Doctor::class,'sections_id','id');
     }
 }

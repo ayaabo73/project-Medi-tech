@@ -32,7 +32,7 @@ Route::get('/re', function () {
 Route::get('/dashboardpatient', function () {
     return view('Patient.dashboard');
 });
-Route::get('/Articals', [PatientController::class, 'artical']);
+Route::get('/Articale', [PatientController::class, 'artical']);
 
 Route::get('/ContactUs', function () {
     return view('Patient.ContactUs');
