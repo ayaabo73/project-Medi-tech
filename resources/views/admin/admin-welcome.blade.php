@@ -69,7 +69,7 @@
                 <div class="auto-container clearfix">
                     <!--Info-->
                     <div class="logo-outer">
-                        <div class="logo"><a href="l"><img src="images/logo1.png" alt="" title=""></a></div>
+                        <div class="logo"><a href="/"><img src="images/logo1.png" alt="" title=""></a></div>
                     </div>
 
                     <!--Nav Box-->
@@ -116,7 +116,7 @@
         	<div class="auto-container clearfix">
             	<!--Logo-->
             	<div class="logo pull-left">
-                	<a href="index.html" class="img-responsive"><img src="images/logo1-small.png" alt="" title=""></a>
+                	<a href="/" class="img-responsive"><img src="images/logo1-small.png" alt="" title=""></a>
                 </div>
                 
 				<!--Right Col-->

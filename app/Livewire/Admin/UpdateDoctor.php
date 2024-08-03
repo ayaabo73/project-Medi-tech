@@ -62,7 +62,7 @@ class UpdateDoctor extends Component
        $doctor->email=$this->email;
        $doctor->phone=$this->phone;
        $doctor->location=$this->location;
-       $doctor->password=$this->password;
+       $doctor->password=bcrypt($this->password);
        $doctor->sections_id=$this->section;
        if($image=$this->image){
        if(File::exists('storage/photos/'.$this->image)){

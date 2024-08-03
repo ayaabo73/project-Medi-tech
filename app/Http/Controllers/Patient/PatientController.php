@@ -19,5 +19,11 @@ class PatientController extends Controller
         $articles=Article::all();
     return view('Patient.Artical',compact('articles'));
     }
-   
+    public function dashboard(){
+        $sections=Section::count();
+        $articl=Article::count();
+        $articles=Article::all();
+        $doctors=Doctor::count();
+    return view('Patient.dashboard',compact('sections','articles','doctors','articl'));
+    }
 }

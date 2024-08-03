@@ -14,6 +14,7 @@ class CreateArticles extends Component
     use WithFileUploads;
     public $title;
    public $body;
+   public $image;
   
     public function render()
     {
@@ -28,12 +29,15 @@ class CreateArticles extends Component
         $this->Validate([
           'title'  =>'required',
           'body'  =>'required',
+          'image'  =>'nullable|mimes:jpg,jpeg,gif,png|max:20000',
         ]);
      
        $article=new Article();
        $article->doctorID=auth()->id();
        $article->title=$this->title;
        $article->body=$this->body;
+       $image=$this->image->store('photos','public');
+       $article->image=$image;
        $article->save();
        session()->flash('message','success');
        return redirect()->to('/Articles');

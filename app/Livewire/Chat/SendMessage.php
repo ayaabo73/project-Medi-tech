@@ -59,10 +59,10 @@ class SendMessage extends Component
         event(new ChatMessageEvent($this->createdMessage));
         $this->selected_conversation->last_time_message = $this->createdMessage->created_at;
         $this->selected_conversation->save();
-        
-        // $this->dispatch('pushMessage',$this->createdMessage->id);
+        $this->reset('body');
         $this->dispatch('refresh');
-        $this->dispatch('clear-message');
+    
+         
     }
     
    

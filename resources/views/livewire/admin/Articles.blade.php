@@ -40,6 +40,7 @@
                             <thead>
                             <tr>
                                 <th></th>
+                                <th>image</th>
                                 <th>title</th>
                                 <th></th>
                                 <th>owner</th>
@@ -51,6 +52,7 @@
                             @foreach ($articles as $article)
                                 <tr>
                                     <td>{{$article->id}}</td>
+                                    <td><img src="{{asset('storage/'.$article->image) }}" width="70px" hight="70px"></td>
                                     <td>{{ $article->title }}</td>
                                     <td></td>
                                     <th>{{ $article->doctor->name}}</th>

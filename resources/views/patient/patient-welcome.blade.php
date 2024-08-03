@@ -100,13 +100,13 @@
                                     </li>
                                     <li class="item"><a class="link" href="#Doctors">Doctor</a>
                                     </li>
-									
+									<li class="item"><a class="link" href="#Check">Check-up</a>
+                                    </li>
 									
 									<li class="item"><a  class="link"href="{{ url('/ContactUs') }}">Contact</a>
                                         
                                     </li>
-									<li class="item"><a  class="link"href="#"></a>
-                                    </li>
+									
                                 </ul>
 
                             </div>
@@ -269,9 +269,9 @@
 				@foreach ($articles as $article )
 				<!-- Department Block -->
 				<div class="department-block">
-					<div class="inner-box">
+					<div class="inner-box"> <img src="{{asset('storage/'.$article->image) }}" alt="...">
 						<div class="upper-box">
-							<div class="icon flaticon-nurse"></div>
+						
 							<h3><a href="#">{{ $article->title}}</a></h3>
 						</div>
 						<div class="text">{{ $article->body }} </div>
@@ -429,7 +429,7 @@
 									<li><a href="#"><span class="fab fa-skype"></span></a></li>
 									<li><a href="#"><span class="fab fa-linkedin-in"></span></a></li>
 								</ul>
-								<a href="#" class="appointment">Make Appointment</a>
+								
 							</div>
 						</div>
 						<div class="lower-content">
@@ -458,7 +458,7 @@
 	
 		
 	</section>
-	<section class="newsletter-section">
+	<section class="newsletter-section" id="Check">
 		<div class="auto-container">
 			<div class="row clearfix">
 				<!-- Title Column -->

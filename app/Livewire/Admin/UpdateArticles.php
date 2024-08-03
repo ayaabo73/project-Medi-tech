@@ -19,6 +19,8 @@ class UpdateArticles extends Component
     public $title;
    public $body;
    public $article;
+   public $image;
+   public $image_original;
  
 
    public function mount(){
@@ -26,6 +28,7 @@ class UpdateArticles extends Component
     $this->article=Article::whereId($this->id)->first();
     $this->title=$this->article->title;
     $this->body=$this->article->body;
+    $this->image_original=$this->doctor->image;
    
 
    }
@@ -42,11 +45,19 @@ class UpdateArticles extends Component
         $this->Validate([
           'title'  =>'required',
           'body'  =>'required',
+          'image'  =>'nullable|mimes:jpg,jpeg,gif,png|max:20000',
         ]);
      
       $article=Article::whereId($this->id)->first();
        $article->title=$this->title;
        $article->body=$this->body;
+       if($image=$this->image){
+        if(File::exists('storage/photos/'.$this->image)){
+         unlink('storage/photos/'.$this->image);
+        }
+        $image=$this->image->store('photos','public');
+        $article->image=$image;
+     }
        $article->update();
        session()->flash('message','success');
        return redirect()->to('/Articles');

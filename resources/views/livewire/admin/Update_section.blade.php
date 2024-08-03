@@ -35,16 +35,19 @@
                            @error('name')<span class="text-danger">{{ $message }}</span>
                            @enderror
                        </div>
-                       
-                   
+                       <br>
+                       <div class="row">
                       @foreach ($doctors as $doctor)
-                      <div class="form-group">
-                                <img src="{{asset('storage/'.$doctor->image) }}" width="270px" hight="370px"/>
-
-           
-                                <h5><a href="#">{{ $doctor->name }}</a></h5>
-                                <h5><a href="javascript:void(0);" data-toggle="modal" data-target="#delete_doctor{{$doctor->id}}">Delet</a></h5>
-                                @endforeach
+                      <div class="card" style="width: 18rem;">
+                        <img src="{{asset('storage/'.$doctor->image) }}"class="card-img-top" alt="...">
+                        <div class="card-body">
+                          <h5 class="card-title">{{ $doctor->name }}</h5>
+                          
+                          <a href="javascript:void(0);" data-toggle="modal" data-target="#delete_doctor{{$doctor->id}}">Delet</a>
+                        </div>
+                      </div>
+                    
+                      &ensp;&ensp;&ensp;&ensp;&ensp;  @endforeach
                             </div>
 
                         </div>   

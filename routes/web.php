@@ -29,9 +29,9 @@ Route::get('/Sections', [PatientController::class, 'index']);
 Route::get('/re', function () {
     return view('auth.register');
 });
-Route::get('/dashboardpatient', function () {
-    return view('Patient.dashboard');
-});
+Route::get('/dashboard/patient', [PatientController::class, 'dashboard'])
+->middleware(['auth', 'verified'])->name('dashboard.user');
+
 Route::get('/Articale', [PatientController::class, 'artical']);
 
 Route::get('/ContactUs', function () {
@@ -40,9 +40,7 @@ Route::get('/ContactUs', function () {
 Route::get('/appointment',[ControllersAppointment::class, 'index']);
 
 
-Route::get('/dashboard/patient', function () {
-    return view('Patient.dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard.user');
+
 
 
 

@@ -26,7 +26,7 @@ class UpdateSection extends Component
    }
     public function render()
     {
-        $doctors=Section::find($this->id)->Doctor;
+        $doctors=Section::find($this->id)->Doctors;
         return view('livewire.admin.Update_section',['doctors'=>$doctors,'section'=>$this->section]);   
     }
     

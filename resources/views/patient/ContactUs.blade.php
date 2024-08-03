@@ -91,7 +91,7 @@
 											</li>
 											<li class="item"><a class="link" href="/">Doctor</a>
 											</li>
-											<li class="item"><a  class="link"href="/">Appointement</a>
+											<li class="item"><a  class="link"href="/">Check-up</a>
 											</li>
 											
 											<li class="item"><a  class="link"href="#">Contact</a>
@@ -205,7 +205,7 @@
 						</div>
 						
 						<div class="col-lg-6 col-md-6 col-sm-12 form-group">
-							<input type="text" name="department" placeholder="Department" required>
+							<input type="text" name="Adress" placeholder="Adress" required>
 						</div>
 						
 						<div class="col-lg-12 col-md-12 col-sm-12 form-group">
@@ -289,13 +289,7 @@
                                     	<a href="index.html"><img src="images/logo1.png" alt="" /></a>
                                     </div>
                                     
-									<ul class="social-icons">
-										<li><a href="#"><span class="fab fa-facebook-f"></span></a></li>
-										<li><a href="#"><span class="fab fa-google"></span></a></li>
-										<li><a href="#"><span class="fab fa-twitter"></span></a></li>
-										<li><a href="#"><span class="fab fa-skype"></span></a></li>
-										<li><a href="#"><span class="fab fa-linkedin"></span></a></li>
-									</ul>
+									
 								</div>
 							</div>
 							

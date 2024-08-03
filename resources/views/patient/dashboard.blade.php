@@ -5,7 +5,7 @@
 <link href="{{URL::asset('dashboard/plugins/owl-carousel/owl.carousel.css')}}" rel="stylesheet" />
 <!-- Maps css -->
 <link href="{{URL::asset('dashboard/plugins/jqvmap/jqvmap.min.css')}}" rel="stylesheet">
-{{-- <img src="/images/patient/home.GIF" width="2000" height="700"> --}}
+
 
 @endsection
 @section('page-header')
@@ -14,16 +14,59 @@
 					<div class="left-content">
 						<div>
 						  <h2 class="main-content-title tx-24 mg-b-1 mg-b-lg-1">Hi, welcome back {{Auth::user()->name}}</h2>
-						  <p class="mg-b-0">let us help you</p>
-						</div>
-					
-					
+						 <br>  <div class="row">
+              <div class="card" style="width: 18rem;">
+             <div class="card-body">
+             <h5 class="card-title">{{$sections }} 
+               <i class="fas fa-address-card"></i></h5>  
+               <p class="card-text"></p><br>
+               <div class="progress" role="progressbar" aria-label="Danger example" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
+               <div class="progress-bar bg-danger" style="width: 50%"></div>
+               </div>
+             </div></div>&ensp;&ensp;&ensp;&ensp;&ensp;
+              <div class="card" style="width: 18rem;">
+             <div class="card-body">
+             <h5 class="card-title">{{$articl}} 
+               <i class="fas fa-address-card"></i></h5>  
+               <p class="card-text"> </p><br>
+               <div class="progress" role="progressbar" aria-label="Danger example" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
+                <div class="progress-bar bg-danger" style="width: 50%"></div>
+               </div>
+             </div></div>&ensp;&ensp;&ensp;&ensp;&ensp;
+              <div class="card" style="width: 18rem;">
+             <div class="card-body">
+             <h5 class="card-title">{{$doctors }} doctors are available to help you
+               <i class="fas fa-address-card"></i></h5>  
+               <p class="card-text">   </p>
+               <a href="/Doctors/list"  class="btn btn-primary btn-sum ">Start the conversation now</a>
+               
+               </div></div>
+             </div></div>
+            </div>
+          </div>
+             
 				<!-- /breadcrumb -->
 @endsection
 @section('content')
-<div class="row">
-<img src="/images/patient/home.gif"  width="1349" height="544"> 
 
+       
+ 
+  
+
+<br>
+<div class="row">
+	@foreach ($articles as $article )
+    <div class="card" style="width: 18rem;">
+      <img src="{{asset('storage/'.$article->image) }}"class="card-img-top" alt="...">
+   <div class="card-body">
+   <h5 class="card-title">{{ $article->title}}</h5>  
+     <p class="card-text">{{ $article->body }}</p>
+     <div class="read-outer">
+        <a href="#" class="read-more">Read More <span class="icon fas fa-angle-double-right"></span></a>
+    </div>
+</div>
+   </div>
+ </div>&ensp;&ensp;&ensp;&ensp;&ensp; @endforeach
 @endsection
 
 @section('js')

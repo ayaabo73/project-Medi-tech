@@ -48,7 +48,7 @@
                             {{$message->body}}
                         </div>
                         <div>
-                            <span>  {{$message->created_at->shortAbsoluteDiffForHumans()}}</span> <a href=""><i class="icon ion-android-more-horizontal"></i></a>
+                            <span>{{$message->created_at->shortAbsoluteDiffForHumans()}}</span><a href=""><i class="icon ion-android-more-horizontal"></i></a>
                         </div>
                     </div>
                 </div>
