@@ -28,7 +28,7 @@ class UpdateArticles extends Component
     $this->article=Article::whereId($this->id)->first();
     $this->title=$this->article->title;
     $this->body=$this->article->body;
-    $this->image_original=$this->doctor->image;
+    $this->image_original=$this->article->image;
    
 
    }

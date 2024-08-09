@@ -25,7 +25,7 @@
 		<i class="fas fa-address-card"></i></h5>  
 	  <p class="card-text">{{$patient }}</p>
 	  <div class="progress" role="progressbar" aria-label="Danger example" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
-		<div class="progress-bar bg-danger" style="width: 50%"></div>
+		<div class="progress-bar bg-danger" style="width: 66%"></div>
 	  </div>
 	</div>
   </div>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
@@ -35,7 +35,7 @@
 		<i class="fas fa-user-md"></i></h5>  
 	  <p class="card-text"> {{ $doctors}}</p>
 	  <div class="progress" role="progressbar" aria-label="Success example" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
-		<div class="progress-bar bg-success" style="width: 60%"></div>
+		<div class="progress-bar bg-success" style="width: 90%"></div>
 	  </div>
 	</div>
   </div>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
@@ -55,7 +55,7 @@
 		<i class="fas fa-file-alt"></i></h5>  
 	  <p class="card-text">{{ $articles}}</p>
   <div class="progress" role="progressbar" aria-label="Warning example" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
-	<div class="progress-bar bg-warning" style="width: 30%"></div>
+	<div class="progress-bar bg-warning" style="width: 50%"></div>
   </div>
 	</div>
   </div>

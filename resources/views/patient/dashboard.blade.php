@@ -17,27 +17,27 @@
 						 <br>  <div class="row">
               <div class="card" style="width: 18rem;">
              <div class="card-body">
-             <h5 class="card-title">{{$sections }} 
-               <i class="fas fa-address-card"></i></h5>  
-               <p class="card-text"></p><br>
+             <h5 class="card-title">{{$sections }} Sections and more are here for you
+               
+               <p class="card-text"></p><br><br><br><br>
                <div class="progress" role="progressbar" aria-label="Danger example" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
                <div class="progress-bar bg-danger" style="width: 50%"></div>
                </div>
              </div></div>&ensp;&ensp;&ensp;&ensp;&ensp;
               <div class="card" style="width: 18rem;">
              <div class="card-body">
-             <h5 class="card-title">{{$articl}} 
-               <i class="fas fa-address-card"></i></h5>  
-               <p class="card-text"> </p><br>
+             <h5 class="card-title">{{$articl}} Medical article,Read more for your health
+              
+               <p class="card-text"> </p><br><br><br><br>
                <div class="progress" role="progressbar" aria-label="Danger example" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
-                <div class="progress-bar bg-danger" style="width: 50%"></div>
+                <div class="progress-bar bg-info" style="width: 80%"></div>
                </div>
              </div></div>&ensp;&ensp;&ensp;&ensp;&ensp;
               <div class="card" style="width: 18rem;">
              <div class="card-body">
              <h5 class="card-title">{{$doctors }} doctors are available to help you
-               <i class="fas fa-address-card"></i></h5>  
-               <p class="card-text">   </p>
+              
+               <p class="card-text">   </p><br><br>
                <a href="/Doctors/list"  class="btn btn-primary btn-sum ">Start the conversation now</a>
                
                </div></div>
@@ -53,20 +53,19 @@
  
   
 
-<br>
 <div class="row">
-	@foreach ($articles as $article )
-    <div class="card" style="width: 18rem;">
-      <img src="{{asset('storage/'.$article->image) }}"class="card-img-top" alt="...">
-   <div class="card-body">
-   <h5 class="card-title">{{ $article->title}}</h5>  
-     <p class="card-text">{{ $article->body }}</p>
-     <div class="read-outer">
-        <a href="#" class="read-more">Read More <span class="icon fas fa-angle-double-right"></span></a>
-    </div>
-</div>
-   </div>
- </div>&ensp;&ensp;&ensp;&ensp;&ensp; @endforeach
+  @foreach ($articles as $article )
+  <div class="card" style="width: 18rem;">
+    <img src="{{asset('storage/'.$article->image) }}"class="card-img-top" alt="...">
+ <div class="card-body">
+ <h5 class="card-title">{{ $article->title}}</h5>  
+   <p class="card-text">{{ $article->body }}</p>
+   <div class="read-outer">
+      <a href="#" class="read-more">Read More <span class="icon fas fa-angle-double-right"></span></a>
+  </div>
+ </div>
+</div>&ensp;&ensp;&ensp;&ensp;&ensp; @endforeach
+
 @endsection
 
 @section('js')

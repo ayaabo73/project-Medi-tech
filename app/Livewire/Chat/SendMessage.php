@@ -61,7 +61,7 @@ class SendMessage extends Component
         $this->selected_conversation->save();
         $this->reset('body');
         $this->dispatch('refresh');
-    
+        $this->dispatch('clear-message');
          
     }
     
